@@ -1,0 +1,4 @@
+plant_id,plant_code,plant_name,location,state,latitude,longitude,slug
+1,P1,Chakan Powertrain Plant,"Chakan, Pune",Maharashtra,18.7606,73.8636,chakan
+2,P2,Oragadam Driveline Plant,"Oragadam, Chennai",Tamil Nadu,12.8378,79.9506,oragadam
+3,P3,Manesar Chassis Plant,"Manesar, Gurugram",Haryana,28.354,76.9366,manesar

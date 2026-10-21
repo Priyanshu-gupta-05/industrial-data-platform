@@ -1,0 +1,4 @@
+shop_floor_id,plant_id,slug,shop_floor_name,first_machine_id,last_machine_id,anchoring_real_dataset
+1,1,powertrain,Powertrain machining,1,40,Bosch CNC Machining (vibration)
+2,2,driveline,Transmission & driveline,41,75,"AI4I 2020 (temperature, torque, tool wear)"
+3,3,chassis,Chassis & brakes,76,100,"UMich SMART (spindle current, inspection labels)"

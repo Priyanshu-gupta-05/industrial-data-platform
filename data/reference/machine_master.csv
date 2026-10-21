@@ -1,0 +1,101 @@
+machine_id,machine_code,plant_id,shop_floor_id,machine_type,part_family_id,controller,uns_topic_root,azure_model,age_years,commissioning_year,rpm_min,rpm_max,rated_power_kw,rated_current_a
+1,P1-HMC-01,1,1,HMC,1,Fanuc 0i-MF Plus,tier1/chakan/powertrain/hmc-01,model3,18,2007,2000,8000,22.0,36.0
+2,P1-HMC-02,1,1,HMC,1,Siemens SINUMERIK 840D sl,tier1/chakan/powertrain/hmc-02,model4,7,2018,2000,8000,22.0,36.0
+3,P1-HMC-03,1,1,HMC,1,Siemens SINUMERIK 828D,tier1/chakan/powertrain/hmc-03,model3,8,2017,2000,8000,22.0,36.0
+4,P1-HMC-04,1,1,HMC,1,Fanuc 31i-B5,tier1/chakan/powertrain/hmc-04,model3,7,2018,2000,8000,22.0,36.0
+5,P1-HMC-05,1,1,HMC,1,Fanuc 31i-B5,tier1/chakan/powertrain/hmc-05,model3,2,2023,2000,8000,22.0,36.0
+6,P1-HMC-06,1,1,HMC,1,Siemens SINUMERIK 840D sl,tier1/chakan/powertrain/hmc-06,model3,7,2018,2000,8000,22.0,36.0
+7,P1-HMC-07,1,1,HMC,1,Fanuc 0i-MF Plus,tier1/chakan/powertrain/hmc-07,model3,20,2005,2000,8000,22.0,36.0
+8,P1-HMC-08,1,1,HMC,1,Siemens SINUMERIK 828D,tier1/chakan/powertrain/hmc-08,model3,16,2009,2000,8000,22.0,36.0
+9,P1-HMC-09,1,1,HMC,1,Fanuc 0i-MF Plus,tier1/chakan/powertrain/hmc-09,model4,7,2018,2000,8000,22.0,36.0
+10,P1-HMC-10,1,1,HMC,1,Fanuc 0i-MF Plus,tier1/chakan/powertrain/hmc-10,model3,10,2015,2000,8000,22.0,36.0
+11,P1-HMC-11,1,1,HMC,1,Siemens SINUMERIK 828D,tier1/chakan/powertrain/hmc-11,model2,6,2019,2000,8000,22.0,36.0
+12,P1-HMC-12,1,1,HMC,1,Siemens SINUMERIK 840D sl,tier1/chakan/powertrain/hmc-12,model3,9,2016,2000,8000,22.0,36.0
+13,P1-HMC-13,1,1,HMC,2,Siemens SINUMERIK 828D,tier1/chakan/powertrain/hmc-13,model1,15,2010,2000,8000,22.0,36.0
+14,P1-HMC-14,1,1,HMC,2,Siemens SINUMERIK 840D sl,tier1/chakan/powertrain/hmc-14,model3,1,2024,2000,8000,22.0,36.0
+15,P1-HMC-15,1,1,HMC,2,Siemens SINUMERIK 828D,tier1/chakan/powertrain/hmc-15,model3,14,2011,2000,8000,22.0,36.0
+16,P1-HMC-16,1,1,HMC,2,Siemens SINUMERIK 840D sl,tier1/chakan/powertrain/hmc-16,model1,3,2022,2000,8000,22.0,36.0
+17,P1-HMC-17,1,1,HMC,2,Siemens SINUMERIK 828D,tier1/chakan/powertrain/hmc-17,model1,14,2011,2000,8000,22.0,36.0
+18,P1-HMC-18,1,1,HMC,2,Fanuc 0i-MF Plus,tier1/chakan/powertrain/hmc-18,model3,15,2010,2000,8000,22.0,36.0
+19,P1-HMC-19,1,1,HMC,2,Siemens SINUMERIK 840D sl,tier1/chakan/powertrain/hmc-19,model3,17,2008,2000,8000,22.0,36.0
+20,P1-HMC-20,1,1,HMC,2,Fanuc 31i-B5,tier1/chakan/powertrain/hmc-20,model2,16,2009,2000,8000,22.0,36.0
+21,P1-HMC-21,1,1,HMC,2,Siemens SINUMERIK 828D,tier1/chakan/powertrain/hmc-21,model2,14,2011,2000,8000,22.0,36.0
+22,P1-HMC-22,1,1,HMC,2,Fanuc 31i-B5,tier1/chakan/powertrain/hmc-22,model1,14,2011,2000,8000,22.0,36.0
+23,P1-HMC-23,1,1,HMC,2,Fanuc 0i-MF Plus,tier1/chakan/powertrain/hmc-23,model1,17,2008,2000,8000,22.0,36.0
+24,P1-HMC-24,1,1,HMC,2,Siemens SINUMERIK 840D sl,tier1/chakan/powertrain/hmc-24,model1,20,2005,2000,8000,22.0,36.0
+25,P1-VMC-01,1,1,VMC,3,Siemens SINUMERIK 840D sl,tier1/chakan/powertrain/vmc-01,model4,16,2009,3000,10000,15.0,24.6
+26,P1-VMC-02,1,1,VMC,3,Siemens SINUMERIK 828D,tier1/chakan/powertrain/vmc-02,model3,3,2022,3000,10000,15.0,24.6
+27,P1-VMC-03,1,1,VMC,3,Fanuc 31i-B5,tier1/chakan/powertrain/vmc-03,model3,9,2016,3000,10000,15.0,24.6
+28,P1-VMC-04,1,1,VMC,3,Siemens SINUMERIK 840D sl,tier1/chakan/powertrain/vmc-04,model4,1,2024,3000,10000,15.0,24.6
+29,P1-VMC-05,1,1,VMC,3,Siemens SINUMERIK 828D,tier1/chakan/powertrain/vmc-05,model4,3,2022,3000,10000,15.0,24.6
+30,P1-VMC-06,1,1,VMC,3,Fanuc 31i-B5,tier1/chakan/powertrain/vmc-06,model3,20,2005,3000,10000,15.0,24.6
+31,P1-VMC-07,1,1,VMC,3,Fanuc 31i-B5,tier1/chakan/powertrain/vmc-07,model1,11,2014,3000,10000,15.0,24.6
+32,P1-VMC-08,1,1,VMC,3,Fanuc 0i-MF Plus,tier1/chakan/powertrain/vmc-08,model4,15,2010,3000,10000,15.0,24.6
+33,P1-VMC-09,1,1,VMC,3,Fanuc 0i-MF Plus,tier1/chakan/powertrain/vmc-09,model3,14,2011,3000,10000,15.0,24.6
+34,P1-VMC-10,1,1,VMC,3,Siemens SINUMERIK 828D,tier1/chakan/powertrain/vmc-10,model4,10,2015,3000,10000,15.0,24.6
+35,P1-VMC-11,1,1,VMC,3,Siemens SINUMERIK 840D sl,tier1/chakan/powertrain/vmc-11,model1,17,2008,3000,10000,15.0,24.6
+36,P1-VMC-12,1,1,VMC,3,Fanuc 0i-MF Plus,tier1/chakan/powertrain/vmc-12,model4,5,2020,3000,10000,15.0,24.6
+37,P1-VMC-13,1,1,VMC,3,Siemens SINUMERIK 840D sl,tier1/chakan/powertrain/vmc-13,model1,16,2009,3000,10000,15.0,24.6
+38,P1-VMC-14,1,1,VMC,3,Siemens SINUMERIK 840D sl,tier1/chakan/powertrain/vmc-14,model4,15,2010,3000,10000,15.0,24.6
+39,P1-VMC-15,1,1,VMC,3,Fanuc 31i-B5,tier1/chakan/powertrain/vmc-15,model4,0,2025,3000,10000,15.0,24.6
+40,P1-VMC-16,1,1,VMC,3,Siemens SINUMERIK 828D,tier1/chakan/powertrain/vmc-16,model2,4,2021,3000,10000,15.0,24.6
+41,P2-TURN-01,2,2,TURN,4,Fanuc 0i-MF Plus,tier1/oragadam/driveline/turn-01,model4,9,2016,800,3500,18.5,30.3
+42,P2-TURN-02,2,2,TURN,4,Siemens SINUMERIK 840D sl,tier1/oragadam/driveline/turn-02,model1,7,2018,800,3500,18.5,30.3
+43,P2-TURN-03,2,2,TURN,4,Siemens SINUMERIK 828D,tier1/oragadam/driveline/turn-03,model3,14,2011,800,3500,18.5,30.3
+44,P2-TURN-04,2,2,TURN,4,Fanuc 31i-B5,tier1/oragadam/driveline/turn-04,model4,7,2018,800,3500,18.5,30.3
+45,P2-TURN-05,2,2,TURN,4,Fanuc 0i-MF Plus,tier1/oragadam/driveline/turn-05,model3,14,2011,800,3500,18.5,30.3
+46,P2-TURN-06,2,2,TURN,4,Siemens SINUMERIK 840D sl,tier1/oragadam/driveline/turn-06,model4,10,2015,800,3500,18.5,30.3
+47,P2-TURN-07,2,2,TURN,4,Fanuc 31i-B5,tier1/oragadam/driveline/turn-07,model2,6,2019,800,3500,18.5,30.3
+48,P2-TURN-08,2,2,TURN,4,Siemens SINUMERIK 840D sl,tier1/oragadam/driveline/turn-08,model4,10,2015,800,3500,18.5,30.3
+49,P2-TURN-09,2,2,TURN,4,Siemens SINUMERIK 828D,tier1/oragadam/driveline/turn-09,model1,15,2010,800,3500,18.5,30.3
+50,P2-TURN-10,2,2,TURN,4,Siemens SINUMERIK 840D sl,tier1/oragadam/driveline/turn-10,model4,4,2021,800,3500,18.5,30.3
+51,P2-HOB-01,2,2,HOB,5,Siemens SINUMERIK 840D sl,tier1/oragadam/driveline/hob-01,model4,19,2006,300,1500,11.0,18.0
+52,P2-HOB-02,2,2,HOB,5,Fanuc 0i-MF Plus,tier1/oragadam/driveline/hob-02,model3,14,2011,300,1500,11.0,18.0
+53,P2-HOB-03,2,2,HOB,5,Fanuc 31i-B5,tier1/oragadam/driveline/hob-03,model3,5,2020,300,1500,11.0,18.0
+54,P2-HOB-04,2,2,HOB,5,Fanuc 31i-B5,tier1/oragadam/driveline/hob-04,model2,10,2015,300,1500,11.0,18.0
+55,P2-HOB-05,2,2,HOB,5,Fanuc 31i-B5,tier1/oragadam/driveline/hob-05,model3,17,2008,300,1500,11.0,18.0
+56,P2-HOB-06,2,2,HOB,5,Fanuc 0i-MF Plus,tier1/oragadam/driveline/hob-06,model1,10,2015,300,1500,11.0,18.0
+57,P2-HOB-07,2,2,HOB,5,Siemens SINUMERIK 828D,tier1/oragadam/driveline/hob-07,model4,10,2015,300,1500,11.0,18.0
+58,P2-HOB-08,2,2,HOB,5,Fanuc 0i-MF Plus,tier1/oragadam/driveline/hob-08,model1,5,2020,300,1500,11.0,18.0
+59,P2-HOB-09,2,2,HOB,5,Siemens SINUMERIK 828D,tier1/oragadam/driveline/hob-09,model3,17,2008,300,1500,11.0,18.0
+60,P2-HOB-10,2,2,HOB,5,Siemens SINUMERIK 828D,tier1/oragadam/driveline/hob-10,model4,3,2022,300,1500,11.0,18.0
+61,P2-TURN-11,2,2,TURN,6,Siemens SINUMERIK 840D sl,tier1/oragadam/driveline/turn-11,model4,2,2023,800,3500,18.5,30.3
+62,P2-TURN-12,2,2,TURN,6,Siemens SINUMERIK 828D,tier1/oragadam/driveline/turn-12,model4,20,2005,800,3500,18.5,30.3
+63,P2-TURN-13,2,2,TURN,6,Fanuc 31i-B5,tier1/oragadam/driveline/turn-13,model4,14,2011,800,3500,18.5,30.3
+64,P2-TURN-14,2,2,TURN,6,Siemens SINUMERIK 840D sl,tier1/oragadam/driveline/turn-14,model3,20,2005,800,3500,18.5,30.3
+65,P2-TURN-15,2,2,TURN,6,Fanuc 31i-B5,tier1/oragadam/driveline/turn-15,model3,15,2010,800,3500,18.5,30.3
+66,P2-GRIND-01,2,2,GRIND,7,Fanuc 31i-B5,tier1/oragadam/driveline/grind-01,model4,6,2019,1500,4500,15.0,24.6
+67,P2-GRIND-02,2,2,GRIND,7,Siemens SINUMERIK 840D sl,tier1/oragadam/driveline/grind-02,model4,14,2011,1500,4500,15.0,24.6
+68,P2-GRIND-03,2,2,GRIND,7,Fanuc 31i-B5,tier1/oragadam/driveline/grind-03,model3,10,2015,1500,4500,15.0,24.6
+69,P2-GRIND-04,2,2,GRIND,7,Fanuc 0i-MF Plus,tier1/oragadam/driveline/grind-04,model2,19,2006,1500,4500,15.0,24.6
+70,P2-GRIND-05,2,2,GRIND,7,Fanuc 31i-B5,tier1/oragadam/driveline/grind-05,model3,9,2016,1500,4500,15.0,24.6
+71,P2-GRIND-06,2,2,GRIND,7,Siemens SINUMERIK 840D sl,tier1/oragadam/driveline/grind-06,model2,18,2007,1500,4500,15.0,24.6
+72,P2-GRIND-07,2,2,GRIND,7,Fanuc 0i-MF Plus,tier1/oragadam/driveline/grind-07,model4,2,2023,1500,4500,15.0,24.6
+73,P2-GRIND-08,2,2,GRIND,7,Fanuc 31i-B5,tier1/oragadam/driveline/grind-08,model2,20,2005,1500,4500,15.0,24.6
+74,P2-GRIND-09,2,2,GRIND,7,Fanuc 0i-MF Plus,tier1/oragadam/driveline/grind-09,model4,4,2021,1500,4500,15.0,24.6
+75,P2-GRIND-10,2,2,GRIND,7,Siemens SINUMERIK 828D,tier1/oragadam/driveline/grind-10,model3,19,2006,1500,4500,15.0,24.6
+76,P3-TURN-01,3,3,TURN,8,Fanuc 31i-B5,tier1/manesar/chassis/turn-01,model2,10,2015,800,3500,18.5,30.3
+77,P3-TURN-02,3,3,TURN,8,Fanuc 31i-B5,tier1/manesar/chassis/turn-02,model4,12,2013,800,3500,18.5,30.3
+78,P3-TURN-03,3,3,TURN,8,Fanuc 0i-MF Plus,tier1/manesar/chassis/turn-03,model4,19,2006,800,3500,18.5,30.3
+79,P3-TURN-04,3,3,TURN,8,Siemens SINUMERIK 828D,tier1/manesar/chassis/turn-04,model3,14,2011,800,3500,18.5,30.3
+80,P3-TURN-05,3,3,TURN,8,Siemens SINUMERIK 828D,tier1/manesar/chassis/turn-05,model3,6,2019,800,3500,18.5,30.3
+81,P3-TURN-06,3,3,TURN,8,Siemens SINUMERIK 840D sl,tier1/manesar/chassis/turn-06,model4,1,2024,800,3500,18.5,30.3
+82,P3-TURN-07,3,3,TURN,8,Fanuc 31i-B5,tier1/manesar/chassis/turn-07,model3,11,2014,800,3500,18.5,30.3
+83,P3-TURN-08,3,3,TURN,8,Fanuc 0i-MF Plus,tier1/manesar/chassis/turn-08,model4,18,2007,800,3500,18.5,30.3
+84,P3-TURN-09,3,3,TURN,8,Siemens SINUMERIK 840D sl,tier1/manesar/chassis/turn-09,model3,9,2016,800,3500,18.5,30.3
+85,P3-VMC-01,3,3,VMC,9,Siemens SINUMERIK 828D,tier1/manesar/chassis/vmc-01,model1,16,2009,3000,10000,15.0,24.6
+86,P3-VMC-02,3,3,VMC,9,Siemens SINUMERIK 828D,tier1/manesar/chassis/vmc-02,model3,2,2023,3000,10000,15.0,24.6
+87,P3-VMC-03,3,3,VMC,9,Fanuc 0i-MF Plus,tier1/manesar/chassis/vmc-03,model2,12,2013,3000,10000,15.0,24.6
+88,P3-VMC-04,3,3,VMC,9,Fanuc 31i-B5,tier1/manesar/chassis/vmc-04,model4,14,2011,3000,10000,15.0,24.6
+89,P3-VMC-05,3,3,VMC,9,Siemens SINUMERIK 840D sl,tier1/manesar/chassis/vmc-05,model3,17,2008,3000,10000,15.0,24.6
+90,P3-VMC-06,3,3,VMC,9,Siemens SINUMERIK 840D sl,tier1/manesar/chassis/vmc-06,model2,2,2023,3000,10000,15.0,24.6
+91,P3-VMC-07,3,3,VMC,9,Fanuc 31i-B5,tier1/manesar/chassis/vmc-07,model4,17,2008,3000,10000,15.0,24.6
+92,P3-VMC-08,3,3,VMC,9,Siemens SINUMERIK 840D sl,tier1/manesar/chassis/vmc-08,model1,2,2023,3000,10000,15.0,24.6
+93,P3-TURN-10,3,3,TURN,10,Siemens SINUMERIK 840D sl,tier1/manesar/chassis/turn-10,model3,18,2007,800,3500,18.5,30.3
+94,P3-TURN-11,3,3,TURN,10,Fanuc 31i-B5,tier1/manesar/chassis/turn-11,model2,18,2007,800,3500,18.5,30.3
+95,P3-TURN-12,3,3,TURN,10,Siemens SINUMERIK 840D sl,tier1/manesar/chassis/turn-12,model2,18,2007,800,3500,18.5,30.3
+96,P3-TURN-13,3,3,TURN,10,Fanuc 31i-B5,tier1/manesar/chassis/turn-13,model2,10,2015,800,3500,18.5,30.3
+97,P3-TURN-14,3,3,TURN,10,Fanuc 0i-MF Plus,tier1/manesar/chassis/turn-14,model2,14,2011,800,3500,18.5,30.3
+98,P3-TURN-15,3,3,TURN,10,Siemens SINUMERIK 828D,tier1/manesar/chassis/turn-15,model2,20,2005,800,3500,18.5,30.3
+99,P3-TURN-16,3,3,TURN,10,Siemens SINUMERIK 828D,tier1/manesar/chassis/turn-16,model1,14,2011,800,3500,18.5,30.3
+100,P3-TURN-17,3,3,TURN,10,Fanuc 0i-MF Plus,tier1/manesar/chassis/turn-17,model4,5,2020,800,3500,18.5,30.3

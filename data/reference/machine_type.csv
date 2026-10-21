@@ -1,0 +1,6 @@
+machine_type,description,rpm_min,rpm_max,rated_power_kw,supply_voltage_v,power_factor,rated_current_a
+HMC,Horizontal machining centre,2000,8000,22.0,415,0.85,36.0
+VMC,Vertical machining centre,3000,10000,15.0,415,0.85,24.6
+TURN,CNC turning centre,800,3500,18.5,415,0.85,30.3
+HOB,CNC gear hobbing machine,300,1500,11.0,415,0.85,18.0
+GRIND,CNC grinding machine,1500,4500,15.0,415,0.85,24.6

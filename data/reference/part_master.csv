@@ -1,0 +1,11 @@
+part_family_id,part_code,part_name,plant_id,machine_type,cycle_time_min,cycle_time_low_min,cycle_time_high_min,material
+1,PF01,Engine block,1,HMC,14.0,12.0,18.0,Cast iron
+2,PF02,Cylinder head,1,HMC,7.5,6.0,9.0,Aluminium alloy
+3,PF03,Crankcase,1,VMC,11.0,9.0,14.0,Aluminium alloy
+4,PF04,Gear shaft,2,TURN,3.5,3.0,4.0,Case-hardening steel
+5,PF05,Helical gear,2,HOB,4.5,3.5,5.5,Case-hardening steel
+6,PF06,Differential housing,2,TURN,6.0,5.0,7.0,Ductile iron
+7,PF07,Gear shaft (finish grind),2,GRIND,2.5,2.0,3.0,Case-hardening steel
+8,PF08,Brake disc,3,TURN,2.0,1.5,2.5,Grey cast iron
+9,PF09,Steering knuckle,3,VMC,5.0,4.0,6.0,Ductile iron
+10,PF10,Wheel hub,3,TURN,3.0,2.5,3.5,Forged steel
