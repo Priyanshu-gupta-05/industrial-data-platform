@@ -1,0 +1,33 @@
+{
+  "files": 1702,
+  "raw_samples_per_axis": 178601240,
+  "raw_bytes_on_disk_h5": 952229265,
+  "raw_hours": 24.805727777777776,
+  "windows": 88536,
+  "extraction_seconds": 40.0,
+  "raw_bytes_per_second_float64_as_stored": 48000,
+  "raw_bytes_per_second_float32": 24000,
+  "feature_bytes_per_second_float32": 168,
+  "reduction_ratio_per_second": 142.85714285714286,
+  "raw_bytes_in_memory_float32": 2143214880,
+  "features_parquet_bytes": 17921161,
+  "measured_reduction_vs_raw_float32": 119.59129656834175,
+  "measured_reduction_vs_h5_on_disk": 53.13435134029542,
+  "fleet_raw_mbps": 19.2,
+  "fleet_feature_mbps": 0.1344,
+  "fleet_raw_TB_per_year": 75.6864,
+  "fleet_feature_TB_per_year": 0.5298048,
+  "pca_file_level_var_explained": [
+    0.1899999976158142,
+    0.11800000071525574
+  ],
+  "tsne_points": 11128,
+  "top_features_auc": {
+    "y_band_150_300": 0.815,
+    "z_band_150_300": 0.798,
+    "y_rms": 0.793,
+    "y_band_50_150": 0.236,
+    "z_rms": 0.762,
+    "x_band_150_300": 0.76
+  }
+}
