@@ -1,0 +1,25 @@
+# Core data
+numpy
+pandas
+pyarrow
+scipy
+h5py
+# Database
+psycopg[binary]
+sqlalchemy
+# ML
+scikit-learn
+shap
+# Visualisation
+matplotlib
+seaborn
+plotly
+# Dashboard
+streamlit
+# Edge / MQTT demo
+paho-mqtt
+amqtt
+# Documents and diagrams
+openpyxl
+python-pptx
+diagrams
