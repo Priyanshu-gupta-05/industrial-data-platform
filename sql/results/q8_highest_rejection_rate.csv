@@ -1,0 +1,11 @@
+rnk,machine_code,part_name,produced,rejected,rejection_rate_pct
+1,P2-GRIND-06,Gear shaft (finish grind),157438,3106,1.973
+2,P2-GRIND-01,Gear shaft (finish grind),158565,3013,1.900
+3,P2-TURN-06,Gear shaft,113160,2131,1.883
+4,P2-GRIND-04,Gear shaft (finish grind),157903,2954,1.871
+5,P2-GRIND-10,Gear shaft (finish grind),157990,2954,1.870
+6,P1-HMC-13,Cylinder head,52521,953,1.815
+7,P2-TURN-02,Gear shaft,113052,2027,1.793
+8,P1-HMC-01,Engine block,28173,501,1.778
+9,P1-HMC-17,Cylinder head,52585,928,1.765
+10,P2-GRIND-08,Gear shaft (finish grind),157816,2785,1.765

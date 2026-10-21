@@ -1,0 +1,11 @@
+rnk,machine_id,machine_code,machine_type,avg_vibration_mm_s,max_vibration_mm_s,iso_zone_of_average
+1,37,P1-VMC-13,VMC,1.856,4.741,B (acceptable)
+2,83,P3-TURN-08,TURN,1.851,4.882,B (acceptable)
+3,64,P2-TURN-14,TURN,1.850,5.142,B (acceptable)
+4,49,P2-TURN-09,TURN,1.848,5.128,B (acceptable)
+5,1,P1-HMC-01,HMC,1.844,5.078,B (acceptable)
+6,19,P1-HMC-19,HMC,1.843,6.173,B (acceptable)
+7,20,P1-HMC-20,HMC,1.842,4.700,B (acceptable)
+8,97,P3-TURN-14,TURN,1.841,4.937,B (acceptable)
+9,17,P1-HMC-17,HMC,1.839,5.431,B (acceptable)
+10,18,P1-HMC-18,HMC,1.838,4.569,B (acceptable)
