@@ -1,0 +1,5 @@
+dataset,nature,files,rows,bytes
+Bosch CNC Machining,real,1702,178601240,952229265
+UMich SMART CNC Mill Tool Wear,real,19,25286,11172868
+Microsoft Azure Predictive Maintenance,benchmark (simulated),5,876100,80402227
+AI4I 2020 Predictive Maintenance,benchmark (synthetic),1,10000,522048

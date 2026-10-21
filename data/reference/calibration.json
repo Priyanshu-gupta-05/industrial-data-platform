@@ -1,0 +1,97 @@
+{
+  "temperature_model_ai4i": {
+    "intercept": 115.21418109824828,
+    "coef": {
+      "air_k": 0.6499152576458769,
+      "rpm": -8.206007783377522e-05,
+      "torque": -0.001586775944727338,
+      "wear": 3.075357518830957e-05
+    },
+    "cv_r2_mean": 0.767177657173516,
+    "cv_r2_std": 0.008846115318068752,
+    "residual_std_k": 0.7152883247579853,
+    "input_ranges": {
+      "air_k": [
+        295.3,
+        304.5
+      ],
+      "rpm": [
+        1168.0,
+        2886.0
+      ],
+      "torque": [
+        3.8,
+        76.6
+      ],
+      "wear": [
+        0.0,
+        253.0
+      ]
+    }
+  },
+  "current_umich": {
+    "umich_cutting_current_q05_a": 14.7,
+    "umich_cutting_current_q50_a": 20.7,
+    "umich_cutting_current_q95_a": 27.1,
+    "umich_current_p999_a": 66.4,
+    "load_fraction_q05": 0.22138554216867468,
+    "load_fraction_q50": 0.31174698795180716,
+    "load_fraction_q95": 0.4081325301204819,
+    "n_cutting_samples": 13339
+  },
+  "vibration": {
+    "azure_vibration_median": 40.237246897880354,
+    "scale_mm_s_per_unit": 0.04473467095222217,
+    "bosch_good_rms_cv": 0.15251848101615906,
+    "bosch_bad_to_good_median_ratio": 1.2583537101745605,
+    "bosch_bad_to_good_ratio_within_operation_median": 1.2259321212768555,
+    "bosch_bad_to_good_ratio_within_operation_p90": 1.6752246856689454,
+    "implied_fault_level_mm_s": 3.0154044342041018,
+    "azure_vibration_pre_comp4_failure_24h": 50.39619563523018,
+    "vib_slope_mm_s_per_unit": 0.11963879980372512,
+    "vib_offset_mm_s": -3.0139359262685677,
+    "fleet_zone_share": {
+      "A good": 0.2574512042004337,
+      "B acceptable": 0.6780972491724689,
+      "C alert": 0.06400867480881178,
+      "D danger": 0.00044287181828558383
+    }
+  },
+  "reject_model": {
+    "umich_crosstab": {
+      "unworn": {
+        "no": 0,
+        "yes": 6
+      },
+      "worn": {
+        "no": 4,
+        "yes": 4
+      }
+    },
+    "umich_log_odds_ratio_worn_vs_unworn": 2.5649493574615367,
+    "umich_odds_ratio": 13.0,
+    "ai4i_logit_coef_per_std": {
+      "proc_k": 0.21733190924260387,
+      "torque": 1.160786548559808,
+      "wear": 0.668064002640124
+    },
+    "b_wear_full_life": 2.5649493574615367,
+    "b_temp_per_std": 0.21733190924260387,
+    "b_vib_per_std": 1.160786548559808,
+    "target_plant_reject_rate": 0.015,
+    "b0_solved": -6.168584337764393
+  },
+  "azure_rotate_p005_p995": [
+    299.8631544231469,
+    578.0557044539224
+  ],
+  "azure_volt_p05_p50_p95": [
+    145.61394254022832,
+    170.6073378572595,
+    196.54943197697924
+  ],
+  "azure_pressure_p005_p995": [
+    74.3547184674939,
+    136.37568275424042
+  ]
+}
