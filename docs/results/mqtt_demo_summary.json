@@ -1,0 +1,17 @@
+{
+  "messages_produced": 482,
+  "outbox_unsent_at_end": 0,
+  "rows_in_postgres": 482,
+  "duplicates_in_postgres": 0,
+  "lost": 0,
+  "per_topic": {
+    "tier1/chakan/powertrain/hmc-07/vibration/features": 241,
+    "tier1/manesar/chassis/turn-03/spindle/telemetry": 241
+  },
+  "max_outbox_backlog": 126,
+  "end_to_end_latency_s_p50_p99": [
+    0.09,
+    12.832
+  ],
+  "note": "latency includes time spent buffered during the outage and subscriber-offline phases"
+}

@@ -24,7 +24,7 @@ data/interim/
 *.sqlite
 
 # Edge demo local buffer
-python/edge/buffer/*.db
+python/edge/buffer/
 
 # OS / editor
 .DS_Store

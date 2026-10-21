@@ -1,0 +1,106 @@
+t_s,phase,produced,outbox_pending,subscriber_received,rows_in_postgres
+0.0,normal,0,0,0,0
+0.53,normal,6,0,6,4
+1.05,normal,10,0,10,10
+1.58,normal,16,0,16,16
+2.11,normal,20,0,20,20
+2.63,normal,26,0,26,25
+3.16,normal,30,0,30,30
+3.67,normal,36,0,36,35
+4.19,normal,40,0,40,40
+4.71,normal,46,0,46,45
+5.24,normal,50,0,50,50
+5.77,normal,56,0,56,55
+6.29,normal,60,0,60,60
+6.82,normal,66,0,66,65
+7.35,normal,70,0,70,70
+7.87,normal,76,0,76,76
+8.39,normal,80,0,80,80
+8.92,normal,86,0,86,86
+9.44,normal,92,2,90,90
+9.97,normal,96,0,96,96
+10.5,subscriber offline,102,0,100,100
+11.17,subscriber offline,108,1,100,100
+11.69,subscriber offline,112,0,100,100
+12.21,subscriber offline,118,2,100,100
+12.73,subscriber offline,122,0,100,100
+13.25,subscriber offline,128,0,100,100
+13.78,subscriber offline,132,0,100,100
+14.3,subscriber offline,138,2,100,100
+14.84,subscriber offline,142,0,100,100
+15.36,subscriber offline,148,0,100,100
+15.88,subscriber offline,152,0,100,100
+16.41,subscriber offline,158,0,100,100
+16.94,subscriber offline,162,0,100,100
+17.46,subscriber offline,168,0,100,100
+17.98,subscriber offline,172,0,100,100
+18.5,subscriber offline,178,0,100,100
+19.02,subscriber offline,182,0,100,100
+19.55,subscriber offline,188,0,100,100
+20.08,subscriber back,194,0,100,100
+20.61,subscriber back,198,0,198,198
+21.13,subscriber back,204,2,202,202
+21.65,subscriber back,208,0,208,208
+22.19,subscriber back,214,0,214,214
+22.71,subscriber back,218,0,218,218
+23.24,subscriber back,224,0,224,223
+23.77,subscriber back,228,0,228,228
+24.28,subscriber back,234,0,234,233
+24.82,subscriber back,238,0,238,238
+25.34,subscriber back,244,0,244,244
+25.87,subscriber back,248,0,248,248
+26.4,subscriber back,254,0,254,254
+26.92,subscriber back,260,2,258,258
+27.44,subscriber back,264,0,264,264
+27.97,subscriber back,270,2,268,268
+28.49,WAN outage (broker down),274,0,274,274
+29.01,WAN outage (broker down),280,6,274,274
+29.54,WAN outage (broker down),284,10,274,274
+30.06,WAN outage (broker down),290,16,274,274
+30.58,WAN outage (broker down),294,20,274,274
+31.11,WAN outage (broker down),300,26,274,274
+31.63,WAN outage (broker down),304,30,274,274
+32.15,WAN outage (broker down),310,36,274,274
+32.67,WAN outage (broker down),314,40,274,274
+33.19,WAN outage (broker down),320,46,274,274
+33.72,WAN outage (broker down),324,50,274,274
+34.23,WAN outage (broker down),330,56,274,274
+34.75,WAN outage (broker down),334,60,274,274
+35.29,WAN outage (broker down),340,66,274,274
+35.8,WAN outage (broker down),344,70,274,274
+36.34,WAN outage (broker down),350,76,274,274
+36.87,WAN outage (broker down),354,80,274,274
+37.38,WAN outage (broker down),360,86,274,274
+37.91,WAN outage (broker down),364,90,274,274
+38.44,WAN outage (broker down),370,96,274,274
+38.95,WAN outage (broker down),374,100,274,274
+39.48,WAN outage (broker down),380,106,274,274
+40.01,link restored,386,112,274,274
+40.55,link restored,390,116,274,274
+41.08,link restored,396,122,274,274
+41.6,link restored,400,126,274,274
+42.12,link restored,406,4,409,394
+42.64,link restored,410,0,416,410
+43.16,link restored,416,0,422,414
+43.68,link restored,420,0,426,420
+44.22,link restored,426,1,432,424
+44.74,link restored,430,0,436,430
+45.26,link restored,436,0,442,434
+45.78,link restored,440,0,446,440
+46.31,link restored,446,1,452,444
+46.85,link restored,450,0,456,450
+47.36,link restored,456,0,462,454
+47.87,link restored,460,0,466,460
+48.4,link restored,466,0,472,465
+48.94,link restored,470,0,476,470
+49.46,link restored,476,0,482,475
+49.99,link restored,480,0,486,480
+50.52,link restored,482,0,488,482
+51.03,link restored,482,0,488,482
+51.55,link restored,482,0,488,482
+52.09,link restored,482,0,488,482
+52.61,link restored,482,0,488,482
+53.13,link restored,482,0,488,482
+53.66,link restored,482,0,488,482
+54.19,link restored,482,0,488,482
+54.71,link restored,482,0,488,482
