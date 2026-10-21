@@ -1,0 +1,47 @@
+{
+  "assumptions": {
+    "downtime_cost_inr_per_machine_hour": 5000,
+    "unplanned_repair_premium_inr": 25000,
+    "planned_intervention_hours": 3.0,
+    "false_alarm_cost_inr": 2500,
+    "realistic_event_recall": 0.6,
+    "realistic_precision": 0.5,
+    "tool_change_policy_wear_min": 150,
+    "tool_cost_inr": 3500,
+    "scrap_cost_share_of_part_value": 0.6,
+    "part_value_inr": {
+      "Engine block": 9000,
+      "Cylinder head": 6500,
+      "Crankcase": 5000,
+      "Gear shaft": 1200,
+      "Helical gear": 900,
+      "Differential housing": 2500,
+      "Gear shaft (finish grind)": 1500,
+      "Brake disc": 700,
+      "Steering knuckle": 1800,
+      "Wheel hub": 1100
+    }
+  },
+  "predictive_maintenance": {
+    "failures_per_year": 743,
+    "mttr_hours": 7.748990578734858,
+    "failures_caught": 445.8,
+    "false_alarms": 445.8,
+    "downtime_hours_saved": 2117.1,
+    "gross_saving_inr": 21730500.0,
+    "false_alarm_cost_inr": 1114500.0,
+    "net_saving_inr": 20616000.0
+  },
+  "tool_change_policy": {
+    "expected_rejects_current": 134367.17892232435,
+    "expected_rejects_policy": 82078.67666783273,
+    "reject_rate_current_pct": 1.4999998205178469,
+    "reject_rate_policy_pct": 0.9162803093548919,
+    "scrap_saving_inr": 68589083.06193303,
+    "tool_changes_current": 20719,
+    "extra_tool_changes": 8806.681513977052,
+    "extra_tool_cost_inr": 30823385.29891968,
+    "net_saving_inr": 37765697.76301335
+  },
+  "total_net_saving_inr_per_year": 58381697.76301335
+}

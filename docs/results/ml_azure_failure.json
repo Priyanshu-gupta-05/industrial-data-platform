@@ -1,0 +1,53 @@
+{
+  "test_metrics": {
+    "n": 292900,
+    "positives": 5400,
+    "base_rate": 0.018436326391259816,
+    "roc_auc": 0.9999900650563607,
+    "pr_auc": 0.9994169904115375,
+    "threshold_rule": "max-F1",
+    "threshold": 0.9733362664204994,
+    "tp": 5398,
+    "fp": 41,
+    "tn": 287459,
+    "fn": 2,
+    "precision": 0.9924618496047067,
+    "recall": 0.9996296296296296,
+    "f1": 0.9960328443583356,
+    "failures_in_test": 225,
+    "failures_with_alert_in_prior_24h": 225,
+    "event_recall": 1.0
+  },
+  "train_rows": 580800,
+  "test_rows": 292900,
+  "train_base_rate": 0.02024793388429752,
+  "ablation": {
+    "telemetry only": {
+      "roc_auc": 0.9635336132045088,
+      "pr_auc": 0.23860943917506472
+    },
+    "error counts only": {
+      "roc_auc": 0.9904862048309179,
+      "pr_auc": 0.6842268423229574
+    },
+    "maintenance age + machine only": {
+      "roc_auc": 0.9755923333333333,
+      "pr_auc": 0.35486699563352136
+    }
+  },
+  "same_hour_error_and_failure": "3 of 719 failure hours (no same-hour leakage)",
+  "top_features": {
+    "error5_count_24h": 0.0893,
+    "error1_count_24h": 0.07928,
+    "error4_count_24h": 0.07161,
+    "volt_mean_24h": 0.06088,
+    "error2_count_24h": 0.02789,
+    "error3_count_24h": 0.02643,
+    "pressure_mean_24h": 0.01606,
+    "rotate_mean_24h": 0.014,
+    "vibration_mean_24h": 0.00973,
+    "comp1_hours_since_replace": 0.00419,
+    "model": 0.0041,
+    "comp4_hours_since_replace": 0.00318
+  }
+}

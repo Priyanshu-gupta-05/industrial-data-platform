@@ -1,0 +1,186 @@
+{
+  "metrics": {
+    "TWF": {
+      "base features": {
+        "n": 10000,
+        "positives": 46,
+        "base_rate": 0.0046,
+        "roc_auc": 0.9523809523809524,
+        "pr_auc": 0.09181746269780154,
+        "threshold_rule": "max-F1",
+        "threshold": 0.07304441333835295,
+        "tp": 22,
+        "fp": 277,
+        "tn": 9677,
+        "fn": 24,
+        "precision": 0.07357859531772576,
+        "recall": 0.4782608695652174,
+        "f1": 0.12753623188405797
+      },
+      "base + physics features": {
+        "n": 10000,
+        "positives": 46,
+        "base_rate": 0.0046,
+        "roc_auc": 0.9308995291383845,
+        "pr_auc": 0.09338892075687362,
+        "threshold_rule": "max-F1",
+        "threshold": 0.22222622874331247,
+        "tp": 7,
+        "fp": 48,
+        "tn": 9906,
+        "fn": 39,
+        "precision": 0.12727272727272726,
+        "recall": 0.15217391304347827,
+        "f1": 0.13861386138613863
+      }
+    },
+    "HDF": {
+      "base features": {
+        "n": 10000,
+        "positives": 115,
+        "base_rate": 0.0115,
+        "roc_auc": 0.9984979437443645,
+        "pr_auc": 0.9413045914365117,
+        "threshold_rule": "max-F1",
+        "threshold": 0.41687793187189565,
+        "tp": 106,
+        "fp": 14,
+        "tn": 9871,
+        "fn": 9,
+        "precision": 0.8833333333333333,
+        "recall": 0.9217391304347826,
+        "f1": 0.902127659574468
+      },
+      "base + physics features": {
+        "n": 10000,
+        "positives": 115,
+        "base_rate": 0.0115,
+        "roc_auc": 0.9998522134987134,
+        "pr_auc": 0.9855526782900927,
+        "threshold_rule": "max-F1",
+        "threshold": 0.4862693651508738,
+        "tp": 113,
+        "fp": 9,
+        "tn": 9876,
+        "fn": 2,
+        "precision": 0.9262295081967213,
+        "recall": 0.9826086956521739,
+        "f1": 0.9535864978902954
+      }
+    },
+    "PWF": {
+      "base features": {
+        "n": 10000,
+        "positives": 95,
+        "base_rate": 0.0095,
+        "roc_auc": 0.9923781184409788,
+        "pr_auc": 0.8440787109299992,
+        "threshold_rule": "max-F1",
+        "threshold": 0.437809659911884,
+        "tp": 73,
+        "fp": 15,
+        "tn": 9890,
+        "fn": 22,
+        "precision": 0.8295454545454546,
+        "recall": 0.7684210526315789,
+        "f1": 0.7978142076502732
+      },
+      "base + physics features": {
+        "n": 10000,
+        "positives": 95,
+        "base_rate": 0.0095,
+        "roc_auc": 0.9999936236350594,
+        "pr_auc": 0.9993746743095364,
+        "threshold_rule": "max-F1",
+        "threshold": 0.39327960322380656,
+        "tp": 94,
+        "fp": 0,
+        "tn": 9905,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.9894736842105263,
+        "f1": 0.9947089947089947
+      }
+    },
+    "OSF": {
+      "base features": {
+        "n": 10000,
+        "positives": 98,
+        "base_rate": 0.0098,
+        "roc_auc": 0.9983903478579879,
+        "pr_auc": 0.9195556496613718,
+        "threshold_rule": "max-F1",
+        "threshold": 0.369986293106059,
+        "tp": 83,
+        "fp": 13,
+        "tn": 9889,
+        "fn": 15,
+        "precision": 0.8645833333333334,
+        "recall": 0.8469387755102041,
+        "f1": 0.8556701030927835
+      },
+      "base + physics features": {
+        "n": 10000,
+        "positives": 98,
+        "base_rate": 0.0098,
+        "roc_auc": 0.9999855729001356,
+        "pr_auc": 0.9987244897959184,
+        "threshold_rule": "max-F1",
+        "threshold": 0.4775852721250725,
+        "tp": 97,
+        "fp": 0,
+        "tn": 9902,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.9897959183673469,
+        "f1": 0.9948717948717949
+      }
+    }
+  },
+  "shap_share": {
+    "TWF": {
+      "type": 0.0148,
+      "air_temp_k": 0.0621,
+      "process_temp_k": 0.0565,
+      "rpm": 0.0871,
+      "torque_nm": 0.0811,
+      "tool_wear_min": 0.3762,
+      "temp_diff_k": 0.0544,
+      "power_w": 0.0967,
+      "strain_min_nm": 0.171
+    },
+    "HDF": {
+      "type": 0.0007,
+      "air_temp_k": 0.0946,
+      "process_temp_k": 0.0275,
+      "rpm": 0.3563,
+      "torque_nm": 0.0814,
+      "tool_wear_min": 0.0039,
+      "temp_diff_k": 0.4065,
+      "power_w": 0.0243,
+      "strain_min_nm": 0.0048
+    },
+    "PWF": {
+      "type": 0.0017,
+      "air_temp_k": 0.0029,
+      "process_temp_k": 0.0041,
+      "rpm": 0.0657,
+      "torque_nm": 0.2165,
+      "tool_wear_min": 0.0064,
+      "temp_diff_k": 0.0044,
+      "power_w": 0.6673,
+      "strain_min_nm": 0.031
+    },
+    "OSF": {
+      "type": 0.0453,
+      "air_temp_k": 0.0023,
+      "process_temp_k": 0.0023,
+      "rpm": 0.0289,
+      "torque_nm": 0.1232,
+      "tool_wear_min": 0.1395,
+      "temp_diff_k": 0.0042,
+      "power_w": 0.0779,
+      "strain_min_nm": 0.5763
+    }
+  }
+}

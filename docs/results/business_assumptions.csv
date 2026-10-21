@@ -1,0 +1,20 @@
+assumption,value
+downtime_cost_inr_per_machine_hour,5000.0
+unplanned_repair_premium_inr,25000.0
+planned_intervention_hours,3.0
+false_alarm_cost_inr,2500.0
+realistic_event_recall,0.6
+realistic_precision,0.5
+tool_change_policy_wear_min,150.0
+tool_cost_inr,3500.0
+scrap_cost_share_of_part_value,0.6
+part_value_inr: Engine block,9000.0
+part_value_inr: Cylinder head,6500.0
+part_value_inr: Crankcase,5000.0
+part_value_inr: Gear shaft,1200.0
+part_value_inr: Helical gear,900.0
+part_value_inr: Differential housing,2500.0
+part_value_inr: Gear shaft (finish grind),1500.0
+part_value_inr: Brake disc,700.0
+part_value_inr: Steering knuckle,1800.0
+part_value_inr: Wheel hub,1100.0
