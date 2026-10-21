@@ -1,0 +1,10 @@
+alarm_code,alarm_name,severity,events,pct,cumulative_pct
+AL-1010,Spindle drive overcurrent / overload,WARNING,1010,21.58,21.58
+AL-2010,Spindle speed deviation (actual < command),WARNING,988,21.11,42.69
+AL-2020,Axis following error (servo lag),WARNING,838,17.91,60.60
+AL-3010,Hydraulic pressure abnormal (tool clamp),WARNING,727,15.53,76.13
+AL-4010,High spindle vibration,WARNING,356,7.61,83.74
+AL-9200,Spindle gearbox / belt failure,CRITICAL,259,5.53,89.27
+AL-9100,Spindle motor / drive failure,CRITICAL,192,4.10,93.38
+AL-9400,Tool breakage / spindle bearing damage,CRITICAL,179,3.82,97.20
+AL-9300,Hydraulic unit / tool-clamp failure,CRITICAL,131,2.80,100.00
