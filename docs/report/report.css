@@ -1,0 +1,41 @@
+@page { size: A4; margin: 20mm 18mm 20mm 18mm;
+  @bottom-center { content: counter(page); font: 9pt "Segoe UI", sans-serif; color: #898781; }
+  @top-right { content: "Industrial Data Platform - Technical Report"; font: 8pt "Segoe UI", sans-serif; color: #898781; } }
+@page :first { @bottom-center { content: none; } @top-right { content: none; } }
+html { font-family: "Segoe UI", system-ui, sans-serif; font-size: 10.2pt; color: #0b0b0b; line-height: 1.45; }
+body { margin: 0; }
+h1, h2, h3, h4 { font-weight: 650; line-height: 1.2; break-after: avoid; }
+h2 { font-size: 16pt; color: #184f95; border-bottom: 2px solid #2a78d6; padding-bottom: 3px; margin-top: 18px; }
+h2.newpage { break-before: page; margin-top: 0; }
+.compact table { font-size: 6.9pt; } .compact td, .compact th { padding: 1px 4px; }
+h3 { font-size: 12.5pt; color: #184f95; margin: 16px 0 6px; }
+h4 { font-size: 11pt; margin: 12px 0 4px; }
+p, li { text-align: justify; hyphens: auto; }
+ul, ol { padding-left: 20px; margin: 4px 0 8px; }
+a { color: #2a78d6; text-decoration: none; }
+code { font-family: "Cascadia Mono", Consolas, monospace; font-size: 8.6pt; background: #f3f2ee; padding: 0 3px; border-radius: 3px; }
+pre { background: #f3f2ee; padding: 8px; font-size: 8.4pt; white-space: pre-wrap; break-inside: avoid; border-radius: 4px; }
+blockquote { margin: 8px 0; padding: 6px 12px; border-left: 3px solid #eda100; background: #fdf6e3; }
+table { border-collapse: collapse; width: 100%; margin: 4px 0 12px; font-size: 8.4pt; break-inside: auto; }
+tr { break-inside: avoid; }
+th { background: #e6f0fb; color: #0b0b0b; font-weight: 600; text-align: left; padding: 4px 5px; border-bottom: 1.5px solid #2a78d6; }
+td { padding: 3px 5px; border-bottom: 0.6px solid #e1e0d9; vertical-align: top; }
+table.data td, table.data th { font-size: 8pt; }
+.cap { font-size: 8.8pt; font-weight: 600; color: #52514e; margin: 10px 0 2px; break-after: avoid; }
+figure { margin: 10px 0 14px; text-align: center; break-inside: avoid; }
+figure img { max-width: 100%; max-height: 96mm; }
+figure.tall img { max-height: 175mm; }
+figcaption { font-size: 8.8pt; color: #52514e; margin-top: 4px; font-weight: 600; }
+.shot { border: 1.5px dashed #c3c2b7; background: #fafaf8; color: #898781; text-align: center; padding: 34px 10px;
+        margin: 10px 0; font-size: 9.5pt; break-inside: avoid; }
+.ref { font-size: 8.4pt; margin: 2px 0; text-align: left; padding-left: 26px; text-indent: -26px; word-break: break-word; }
+.title-page { height: 245mm; display: flex; flex-direction: column; justify-content: center; break-after: page; }
+.title-page h1 { font-size: 27pt; color: #184f95; margin: 0 0 10px; border: none; }
+.title-page .sub { font-size: 14pt; color: #52514e; margin-bottom: 36px; }
+.title-page .meta { font-size: 11pt; line-height: 1.8; }
+.title-page .band { height: 6px; background: linear-gradient(90deg, #2a78d6, #1baf7a, #eb6834); margin: 26px 0; width: 70%; }
+.toc ul { list-style: none; padding-left: 14px; } .toc > ul { padding-left: 0; } .toc li { margin: 2px 0; text-align: left; }
+.kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 10px 0 14px; }
+.kpis div { border: 1px solid #e1e0d9; border-radius: 6px; padding: 8px; text-align: center; }
+.kpis b { display: block; font-size: 15pt; color: #184f95; }
+.kpis span { font-size: 8pt; color: #52514e; }

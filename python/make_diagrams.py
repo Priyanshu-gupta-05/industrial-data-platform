@@ -278,7 +278,7 @@ def er_diagram() -> None:
 
 # --------------------------------------------------------------------------------------------- 05
 def data_pipeline() -> None:
-    g = base("pipeline", "LR", nodesep="0.3", ranksep="0.6",
+    g = base("pipeline", "TB", nodesep="0.3", ranksep="0.55",
              label="Data pipeline - from four public datasets to the PostgreSQL fleet table, models and dashboard",
              labelloc="t", fontsize="15")
     ds = [("bosch", "Bosch CNC Machining\nREAL, 2 kHz, 1,702 files, CC-BY-4.0", BLUE),

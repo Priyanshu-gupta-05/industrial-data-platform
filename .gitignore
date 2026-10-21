@@ -37,3 +37,6 @@ Thumbs.db
 *.log
 *.toc
 .claude/
+
+# Generated report HTML (absolute local paths)
+docs/report/build/

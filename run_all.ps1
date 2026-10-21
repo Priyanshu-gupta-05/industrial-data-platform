@@ -46,6 +46,7 @@ Step "ML: AI4I failure modes"          { & $py -W ignore python\ml\ml_ai4i_failu
 Step "ML: business impact (INR)"       { & $py -W ignore python\ml\business_impact.py }
 Step "Part C decision matrix + cost"   { & $py -W ignore python\part_c_decision_matrix.py }
 Step "Diagrams"                        { & $py python\make_diagrams.py }
+Step "Technical report (PDF)"          { & $py python\build_report.py }
 if ($WithMqtt -and -not $SkipDb) {
     Step "MQTT store-and-forward demo" { & $py -W ignore python\edge\run_mqtt_demo.py }
 }

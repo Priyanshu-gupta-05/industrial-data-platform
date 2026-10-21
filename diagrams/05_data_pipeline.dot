@@ -1,5 +1,5 @@
 digraph pipeline {
-	bgcolor=white dpi=200 fontname="Segoe UI" fontsize=15 label="Data pipeline - from four public datasets to the PostgreSQL fleet table, models and dashboard" labelloc=t nodesep=0.3 pad=0.3 rankdir=LR ranksep=0.6
+	bgcolor=white dpi=200 fontname="Segoe UI" fontsize=15 label="Data pipeline - from four public datasets to the PostgreSQL fleet table, models and dashboard" labelloc=t nodesep=0.3 pad=0.3 rankdir=TB ranksep=0.55
 	node [color="#c3c2b7" fontname="Segoe UI" fontsize=11 penwidth=1.2]
 	edge [arrowsize=0.7 color="#52514e" fontname="Segoe UI" fontsize=9.5 penwidth=1.2]
 	subgraph cluster_src {
