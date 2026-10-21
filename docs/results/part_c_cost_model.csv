@@ -1,0 +1,49 @@
+scenario,cloud,component,usd_month,inr_month
+"S0 raw, one message per reading",AWS,Ingestion (IoT Core msgs + rules),30818.672,2918975.109144
+"S0 raw, one message per reading",AWS,"Stream processing (Kinesis, 2 shards)",552.672,52346.052144
+"S0 raw, one message per reading",AWS,Data lake storage (S3),154.95652173913044,14676.62947826087
+"S0 raw, one message per reading",AWS,PostgreSQL (2 vCPU burstable + 128 GB),61.52,5826.83604
+"S0 raw, one message per reading",Azure,Ingestion (IoT Hub S3),14000.0,1326003.0
+"S0 raw, one message per reading",Azure,Stream processing (Event Hubs 2 TU),841.5360000000001,79705.661472
+"S0 raw, one message per reading",Azure,Data lake storage (ADLS Gen2 Hot),123.96521739130435,11741.303582608696
+"S0 raw, one message per reading",Azure,PostgreSQL (2 vCPU burstable + 128 GB),87.328,8271.227856
+"S0 raw, one message per reading",GCP,Ingestion (Pub/Sub + 3 broker VMs),309.65756468474865,29329.061410333627
+"S0 raw, one message per reading",GCP,"Stream processing (Dataflow, assumed 1 worker)",50.400000000000006,4773.6108
+"S0 raw, one message per reading",GCP,Data lake storage (Cloud Storage),123.96521739130435,11741.303582608696
+"S0 raw, one message per reading",GCP,PostgreSQL (2 vCPU + 4 GiB + 128 GB),101.39200000000001,9603.292584
+S1 raw 1 Hz + raw 100 Hz,AWS,Ingestion (IoT Core msgs + rules),354.0672,33535.2978144
+S1 raw 1 Hz + raw 100 Hz,AWS,"Stream processing (Kinesis, 2 shards)",29.995200000000004,2840.9803704000005
+S1 raw 1 Hz + raw 100 Hz,AWS,Data lake storage (S3),11.551304347826088,1094.076015652174
+S1 raw 1 Hz + raw 100 Hz,AWS,PostgreSQL (2 vCPU burstable + 128 GB),61.52,5826.83604
+S1 raw 1 Hz + raw 100 Hz,Azure,Ingestion (IoT Hub S2),700.0,66300.15
+S1 raw 1 Hz + raw 100 Hz,Azure,Stream processing (Event Hubs 2 TU),50.4576,4779.0663552
+S1 raw 1 Hz + raw 100 Hz,Azure,Data lake storage (ADLS Gen2 Hot),9.24104347826087,875.2608125217392
+S1 raw 1 Hz + raw 100 Hz,Azure,PostgreSQL (2 vCPU burstable + 128 GB),87.328,8271.227856
+S1 raw 1 Hz + raw 100 Hz,GCP,Ingestion (Pub/Sub + 3 broker VMs),189.66538209468126,17964.06183240669
+S1 raw 1 Hz + raw 100 Hz,GCP,"Stream processing (Dataflow, assumed 1 worker)",50.400000000000006,4773.6108
+S1 raw 1 Hz + raw 100 Hz,GCP,Data lake storage (Cloud Storage),9.24104347826087,875.2608125217392
+S1 raw 1 Hz + raw 100 Hz,GCP,PostgreSQL (2 vCPU + 4 GiB + 128 GB),101.39200000000001,9603.292584
+S2 raw 1 Hz + edge features,AWS,Ingestion (IoT Core msgs + rules),354.0672,33535.2978144
+S2 raw 1 Hz + edge features,AWS,"Stream processing (Kinesis, 2 shards)",29.995200000000004,2840.9803704000005
+S2 raw 1 Hz + edge features,AWS,Data lake storage (S3),9.691826086956523,917.9564619130435
+S2 raw 1 Hz + edge features,AWS,PostgreSQL (2 vCPU burstable + 128 GB),61.52,5826.83604
+S2 raw 1 Hz + edge features,Azure,Ingestion (IoT Hub S2),700.0,66300.15
+S2 raw 1 Hz + edge features,Azure,Stream processing (Event Hubs 2 TU),50.4576,4779.0663552
+S2 raw 1 Hz + edge features,Azure,Data lake storage (ADLS Gen2 Hot),7.753460869565218,734.3651695304349
+S2 raw 1 Hz + edge features,Azure,PostgreSQL (2 vCPU burstable + 128 GB),87.328,8271.227856
+S2 raw 1 Hz + edge features,GCP,Ingestion (Pub/Sub + 3 broker VMs),188.10949131846428,17816.696415482686
+S2 raw 1 Hz + edge features,GCP,"Stream processing (Dataflow, assumed 1 worker)",50.400000000000006,4773.6108
+S2 raw 1 Hz + edge features,GCP,Data lake storage (Cloud Storage),7.753460869565218,734.3651695304349
+S2 raw 1 Hz + edge features,GCP,PostgreSQL (2 vCPU + 4 GiB + 128 GB),101.39200000000001,9603.292584
+S3 raw 2 kHz tri-axial,AWS,Ingestion (IoT Core msgs + rules),2251.4592000000002,213245.83239840003
+S3 raw 2 kHz tri-axial,AWS,"Stream processing (Kinesis, 2 shards)",34.790400000000005,3295.1553408000004
+S3 raw 2 kHz tri-axial,AWS,Data lake storage (S3),659.031552,62419.843931904004
+S3 raw 2 kHz tri-axial,AWS,PostgreSQL (2 vCPU burstable + 128 GB),61.52,5826.83604
+S3 raw 2 kHz tri-axial,Azure,Ingestion (IoT Hub S3),3500.0,331500.75
+S3 raw 2 kHz tri-axial,Azure,Stream processing (Event Hubs 2 TU),50.4576,4779.0663552
+S3 raw 2 kHz tri-axial,Azure,Data lake storage (ADLS Gen2 Hot),527.2252416,49935.8751455232
+S3 raw 2 kHz tri-axial,Azure,PostgreSQL (2 vCPU burstable + 128 GB),87.328,8271.227856
+S3 raw 2 kHz tri-axial,GCP,Ingestion (Pub/Sub + 3 broker VMs),579.5904698967934,54895.621561039836
+S3 raw 2 kHz tri-axial,GCP,"Stream processing (Dataflow, assumed 1 worker)",50.400000000000006,4773.6108
+S3 raw 2 kHz tri-axial,GCP,Data lake storage (Cloud Storage),527.2252416,49935.8751455232
+S3 raw 2 kHz tri-axial,GCP,PostgreSQL (2 vCPU + 4 GiB + 128 GB),101.39200000000001,9603.292584

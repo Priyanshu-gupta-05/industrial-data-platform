@@ -1,0 +1,75 @@
+{
+  "usd_inr": 94.7145,
+  "fx_date": "2026-10-21",
+  "scenario_bytes_per_machine_second": {
+    "S0 raw, one message per reading": 125,
+    "S1 raw 1 Hz + raw 100 Hz": 1025,
+    "S2 raw 1 Hz + edge features": 860,
+    "S3 raw 2 kHz tri-axial": 42376
+  },
+  "monthly_inr_totals": {
+    "S0 raw, one message per reading": {
+      "AWS": 2991825.0,
+      "Azure": 1425721.0,
+      "GCP": 55447.0
+    },
+    "S1 raw 1 Hz + raw 100 Hz": {
+      "AWS": 43297.0,
+      "Azure": 80226.0,
+      "GCP": 33216.0
+    },
+    "S2 raw 1 Hz + edge features": {
+      "AWS": 43121.0,
+      "Azure": 80085.0,
+      "GCP": 32928.0
+    },
+    "S3 raw 2 kHz tri-axial": {
+      "AWS": 284788.0,
+      "Azure": 394487.0,
+      "GCP": 119208.0
+    }
+  },
+  "batching_saving_inr_month_S0_minus_S1": {
+    "AWS": 2948527.0,
+    "Azure": 1345495.0,
+    "GCP": 22231.0
+  },
+  "edge_saving_inr_month_S1_minus_S2": {
+    "AWS": 176.0,
+    "Azure": 141.0,
+    "GCP": 288.0
+  },
+  "edge_saving_inr_month_S3_minus_S2": {
+    "AWS": 241667.0,
+    "Azure": 314402.0,
+    "GCP": 86280.0
+  },
+  "weighted_totals": {
+    "AWS": 3.92,
+    "Azure": 4.22,
+    "GCP": 3.57
+  },
+  "monte_carlo": {
+    "runs": 10000,
+    "win_share": {
+      "AWS": 0.1088,
+      "Azure": 0.887,
+      "GCP": 0.0042
+    },
+    "azure_minus_best_other_p05_p50_p95": [
+      -0.099,
+      0.26,
+      0.59
+    ],
+    "method": "weights ~ Dirichlet(50 x baseline share), scores + U(-0.5, 0.5) clipped to 1-5"
+  },
+  "profiles_winners": {
+    "Baseline (scenario)": "Azure",
+    "Cost-heavy (cost 35)": "AWS",
+    "Capability-heavy (cost 3)": "Azure",
+    "OT/edge-first": "Azure",
+    "Analytics/AI-first": "Azure",
+    "Equal weights": "Azure"
+  },
+  "weight_shift_winner_changes": 0
+}
