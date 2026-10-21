@@ -1,0 +1,80 @@
+digraph pipeline {
+	bgcolor=white dpi=200 fontname="Segoe UI" fontsize=15 label="Data pipeline - from four public datasets to the PostgreSQL fleet table, models and dashboard" labelloc=t nodesep=0.3 pad=0.3 rankdir=LR ranksep=0.6
+	node [color="#c3c2b7" fontname="Segoe UI" fontsize=11 penwidth=1.2]
+	edge [arrowsize=0.7 color="#52514e" fontname="Segoe UI" fontsize=9.5 penwidth=1.2]
+	subgraph cluster_src {
+		color="#c3c2b7" label="Raw datasets (../raw_datasets, not in repo)" style=rounded
+		bosch [label="Bosch CNC Machining
+REAL, 2 kHz, 1,702 files, CC-BY-4.0" color="#2a78d6" fillcolor=white penwidth=2 shape=cylinder style=filled]
+		umich [label="UMich SMART CNC
+REAL, 10 Hz, 18 experiments" color="#2a78d6" fillcolor=white penwidth=2 shape=cylinder style=filled]
+		azure [label="Microsoft Azure PdM
+BENCHMARK (simulated), 876k h" color="#eda100" fillcolor=white penwidth=2 shape=cylinder style=filled]
+		ai4i [label="AI4I 2020
+BENCHMARK (synthetic), 10k rows" color="#eda100" fillcolor=white penwidth=2 shape=cylinder style=filled]
+	}
+	s00 [label="00 download
+01 verify" color="#2a78d6" fillcolor="#eef4fc" shape=box style="rounded,filled"]
+	s02 [label="02 reference
+tables" color="#2a78d6" fillcolor="#eef4fc" shape=box style="rounded,filled"]
+	s03 [label="03 edge features
+(1-s, 42 values)" color="#2a78d6" fillcolor="#eef4fc" shape=box style="rounded,filled"]
+	s04 [label="04 calibrate
+(temp, current,
+vibration, rejects,
+alarm mapping)" color="#2a78d6" fillcolor="#eef4fc" shape=box style="rounded,filled"]
+	s05 [label="05 build fleet
+table" color="#2a78d6" fillcolor="#eef4fc" shape=box style="rounded,filled"]
+	s06 [label="06 load PostgreSQL
+(COPY)" color="#2a78d6" fillcolor="#eef4fc" shape=box style="rounded,filled"]
+	s07 [label="07 run SQL
+(8 + 10 queries)" color="#2a78d6" fillcolor="#eef4fc" shape=box style="rounded,filled"]
+	ml [label="ml/: anomaly,
+tool wear, failure-24h,
+failure modes, INR impact" color="#2a78d6" fillcolor="#eef4fc" shape=box style="rounded,filled"]
+	pa [label="Part A volume &
+measured compression" color="#2a78d6" fillcolor="#eef4fc" shape=box style="rounded,filled"]
+	pc [label="Part C decision
+matrix & cost model" color="#2a78d6" fillcolor="#eef4fc" shape=box style="rounded,filled"]
+	feat [label="bosch_features_1s.parquet
+88,536 windows (DERIVED)" color="#1baf7a" fillcolor="#e9f7f1" shape=note style=filled]
+	fleet [label="machine_data.parquet
+876,100 rows (DERIVED)" color="#1baf7a" fillcolor="#e9f7f1" shape=note style=filled]
+	pg [label="PostgreSQL
+raw / core / analytics / edge" color="#1baf7a" fillcolor="#e9f7f1" shape=note style=filled]
+	res [label="sql/results, docs/results,
+docs/figures" color="#1baf7a" fillcolor="#e9f7f1" shape=note style=filled]
+	dash [label="Streamlit dashboard
+(Postgres local / Parquet hosted)" color="#1baf7a" fillcolor="#e9f7f1" shape=note style=filled]
+	bosch -> s03
+	s03 -> feat
+	feat -> s04
+	umich -> s04
+	ai4i -> s04
+	azure -> s04
+	azure -> s05
+	s02 -> s05
+	s04 -> s05
+	s05 -> fleet
+	fleet -> s06
+	s06 -> pg
+	pg -> s07
+	s07 -> res
+	feat -> ml
+	umich -> ml
+	azure -> ml
+	ai4i -> ml
+	ml -> res
+	umich -> pa
+	bosch -> pa
+	pa -> res
+	pc -> res
+	pg -> dash
+	fleet -> dash
+	res -> dash
+	s00 -> s02
+	s00 -> bosch [arrowhead=none color="#898781" style=dashed]
+	s00 -> umich [arrowhead=none color="#898781" style=dashed]
+	s00 -> azure [arrowhead=none color="#898781" style=dashed]
+	s00 -> ai4i [arrowhead=none color="#898781" style=dashed]
+}

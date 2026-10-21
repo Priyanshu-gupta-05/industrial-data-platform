@@ -1,0 +1,63 @@
+digraph security {
+	bgcolor=white compound=true dpi=200 fontname="Segoe UI" fontsize=15 label="Part F - Security zoning: Purdue model levels and IEC 62443 zones & conduits (one plant shown; same at P1-P3)" labelloc=t nodesep=0.35 pad=0.3 rankdir=TB ranksep=0.45
+	node [color="#c3c2b7" fontname="Segoe UI" fontsize=11 penwidth=1.2]
+	edge [arrowsize=0.7 color="#52514e" fontname="Segoe UI" fontsize=9.5 penwidth=1.2]
+	subgraph cluster_cloud {
+		color="#2a78d6" fillcolor="#eef4fc" fontcolor="#0b0b0b" fontsize=12 label="Level 5 - Cloud zone: Azure Central India   [SL-T 2]" penwidth=1.6 style="rounded,filled"
+		c1 [label="IoT Hub / Event Hubs
+(X.509 per gateway)" fillcolor=white shape=box style="rounded,filled"]
+		c2 [label="ADX / ADLS / PostgreSQL
+(private endpoints)" fillcolor=white shape=box style="rounded,filled"]
+		c3 [label="Azure ML, Power BI
+(Entra ID, MFA, RBAC)" fillcolor=white shape=box style="rounded,filled"]
+		c4 [label="Sentinel, Defender for Cloud,
+Key Vault" fillcolor=white shape=box style="rounded,filled"]
+	}
+	subgraph cluster_ent {
+		color="#52514e" fillcolor="#f6f6f3" fontcolor="#0b0b0b" fontsize=12 label="Level 4 - Enterprise IT zone   [SL-T 2]" penwidth=1.6 style="rounded,filled"
+		e1 [label="ERP / SAP, MES reports" fillcolor=white shape=box style="rounded,filled"]
+		e2 [label="Office users, Power BI clients" fillcolor=white shape=box style="rounded,filled"]
+	}
+	subgraph cluster_dmz {
+		color="#eb6834" fillcolor="#fdf0ea" fontcolor="#0b0b0b" fontsize=12 label="Level 3.5 - Industrial DMZ   [SL-T 3]" penwidth=1.6 style="rounded,filled"
+		d1 [label="Outbound-only MQTT/TLS relay
+(no inbound from internet)" fillcolor=white shape=box style="rounded,filled"]
+		d2 [label="Patch / AV / update server" fillcolor=white shape=box style="rounded,filled"]
+		d3 [label="Jump host (MFA, session recording)
+for vendor remote access" fillcolor=white shape=box style="rounded,filled"]
+	}
+	subgraph cluster_ops {
+		color="#eda100" fillcolor="#fdf6e3" fontcolor="#0b0b0b" fontsize=12 label="Level 3 - Site operations zone   [SL-T 3]" penwidth=1.6 style="rounded,filled"
+		o1 [label="Edge gateway cluster x2
+IoT Operations, OPC UA client,
+durable outbox (7 days)" fillcolor=white shape=box style="rounded,filled"]
+		o2 [label="Plant historian / local Grafana" fillcolor=white shape=box style="rounded,filled"]
+		o3 [label="Defender for IoT sensor
+(passive SPAN, local mode)" fillcolor=white shape=box style="rounded,filled"]
+	}
+	subgraph cluster_cell {
+		color="#e34948" fillcolor="#fcecec" fontcolor="#0b0b0b" fontsize=12 label="Levels 0-2 - Cell / machine zone (per shop floor VLAN)   [SL-T 2-3]" penwidth=1.6 style="rounded,filled"
+		m1 [label="CNC controllers
+Fanuc / SINUMERIK
+OPC UA server" fillcolor=white shape=box style="rounded,filled"]
+		m2 [label="PLC, safety I/O
+(no cloud path)" fillcolor=white shape=box style="rounded,filled"]
+		m3 [label="Accelerometers, DAQ,
+HMI panels" fillcolor=white shape=box style="rounded,filled"]
+	}
+	m1 -> o1 [label=" C1: OPC UA 4840
+ Sign&Encrypt, certs" color="#52514e" fontsize=9]
+	m3 -> o1 [label=" C1: Modbus/TCP, local" color="#52514e" fontsize=9]
+	o1 -> d1 [label=" C2: MQTT/TLS 8883
+ outbound only" color="#2a78d6" fontsize=9 penwidth=1.8]
+	d1 -> c1 [label=" C3: TLS 1.2+ to Azure
+ (private peering / VPN)" color="#2a78d6" fontsize=9 penwidth=1.8]
+	c3 -> e2 [label=" C4: HTTPS, Entra ID" color="#52514e" fontsize=9]
+	d3 -> o1 [label=" C5: RDP/SSH via jump host,
+ time-boxed, audited" color="#52514e" fontsize=9 style=dashed]
+	o3 -> m1 [label=" passive monitoring (SPAN)" color="#52514e" dir=back fontsize=9 style=dotted]
+	m2 -> m1 [style=invis]
+	legend [label="Rules: no direct traffic L4/L5 -> L0-L2;  all flows initiated from lower to higher level;
+deny-by-default firewalls at every conduit;  machine protection and alarms never depend on the cloud." color="#c3c2b7" fontcolor="#52514e" fontsize=10 shape=note]
+	e1 -> legend [style=invis]
+}

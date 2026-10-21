@@ -1,0 +1,12 @@
+digraph edgecloud {
+	bgcolor=white dpi=200 fontname="Segoe UI" fontsize=15 label="Part G - What runs at the edge and what runs in the cloud (numbers measured in this project)" labelloc=t nodesep=0.25 pad=0.3 rankdir=LR ranksep=1.2
+	node [color="#c3c2b7" fontname="Segoe UI" fontsize=11 penwidth=1.2]
+	edge [arrowsize=0.7 color="#52514e" fontname="Segoe UI" fontsize=9.5 penwidth=1.2]
+	"edge" [label=<<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="5"><TR><TD><B><FONT POINT-SIZE="14" COLOR="#eb6834">EDGE (plant gateway)</FONT></B></TD></TR><TR><TD ALIGN="LEFT">• High-frequency vibration processing (2 kHz -&gt; 42 features/s)</TD></TR><TR><TD ALIGN="LEFT">• Immediate alarms &amp; interlocks (&lt; 100 ms)</TD></TR><TR><TD ALIGN="LEFT">• Local machine protection (spindle overload stop)</TD></TR><TR><TD ALIGN="LEFT">• Noise filtering &amp; data-quality checks</TD></TR><TR><TD ALIGN="LEFT">• Protocol conversion OPC UA / FOCAS -&gt; MQTT</TD></TR><TR><TD ALIGN="LEFT">• Aggregation &amp; batching (1 msg / machine-second)</TD></TR><TR><TD ALIGN="LEFT">• Store-and-forward during WAN outage (7 days)</TD></TR><TR><TD ALIGN="LEFT">• Local HMI / plant Grafana</TD></TR><TR><TD ALIGN="LEFT">• Model inference at the edge (Isolation Forest)</TD></TR></TABLE>> color="#eb6834" fillcolor="#fdf0ea" penwidth=2 shape=box style="rounded,filled"]
+	cloud [label=<<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="5"><TR><TD><B><FONT POINT-SIZE="14" COLOR="#2a78d6">CLOUD (Azure Central India)</FONT></B></TD></TR><TR><TD ALIGN="LEFT">• Historical analysis (876,100 machine-hours)</TD></TR><TR><TD ALIGN="LEFT">• Fleet-level analysis &amp; benchmarking (3 plants)</TD></TR><TR><TD ALIGN="LEFT">• Long-term storage (data lake, 12+ months)</TD></TR><TR><TD ALIGN="LEFT">• AI/ML model development &amp; retraining</TD></TR><TR><TD ALIGN="LEFT">• Management dashboards (OEE, quality, alarms)</TD></TR><TR><TD ALIGN="LEFT">• OTA model &amp; config updates to gateways</TD></TR><TR><TD ALIGN="LEFT">• ERP / MES / SAP integration</TD></TR><TR><TD ALIGN="LEFT">• Digital twin &amp; what-if simulation</TD></TR><TR><TD ALIGN="LEFT">• Security monitoring (SIEM)</TD></TR></TABLE>> color="#2a78d6" fillcolor="#eef4fc" penwidth=2 shape=box style="rounded,filled"]
+	"edge" -> cloud [label="  features + 1 Hz data
+  19.2 -> 0.13 Mbps (fleet vibration)
+  75.7 -> 0.53 TB/year  " color="#1baf7a" fontsize=11 penwidth=3]
+	cloud -> "edge" [label="  models, thresholds,
+  configuration (OTA)  " color="#6250d6" fontsize=11 penwidth=2 style=dashed]
+}
