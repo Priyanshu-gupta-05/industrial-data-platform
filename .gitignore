@@ -1,0 +1,38 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Secrets - never commit
+.env
+.streamlit/secrets.toml
+dashboard/.streamlit/secrets.toml
+*.pem
+*.key
+
+# Raw datasets live outside the repo (see python/00_download_datasets.py)
+raw_datasets/
+data/raw/
+*.h5
+*.zip
+
+# Large intermediates (only the small Parquet snapshot in data/processed/ is committed)
+data/interim/
+*.duckdb
+*.sqlite
+
+# Edge demo local buffer
+python/edge/buffer/*.db
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Report build intermediates
+*.aux
+*.log
+*.toc
