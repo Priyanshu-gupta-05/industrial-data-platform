@@ -1,0 +1,32 @@
+{
+  "byte_assumptions": {
+    "timestamp (int64 epoch ns)": 8,
+    "value (float64)": 8,
+    "machine_id (int16)": 2,
+    "sensor_id (int16)": 2
+  },
+  "tcp_ip_overhead_bytes": 40,
+  "messages": {
+    "json_single_value": {
+      "topic": "tier1/chakan/powertrain/hmc-07/spindle_temperature",
+      "payload_bytes": 125,
+      "mqtt_publish_bytes": 179,
+      "points_per_message": 1,
+      "bytes_per_point_on_wire": 219.0
+    },
+    "json_batched_10_sensors": {
+      "topic": "tier1/chakan/powertrain/hmc-07/telemetry",
+      "payload_bytes": 296,
+      "mqtt_publish_bytes": 340,
+      "points_per_message": 10,
+      "bytes_per_point_on_wire": 38.0
+    },
+    "json_batched_100Hz_1s_block": {
+      "topic": "tier1/chakan/powertrain/hmc-07/spindle_vibration/raw",
+      "payload_bytes": 729,
+      "mqtt_publish_bytes": 785,
+      "points_per_message": 100,
+      "bytes_per_point_on_wire": 8.25
+    }
+  }
+}

@@ -1,0 +1,6 @@
+scenario,points per second,points per hour,points per day,points per month (30 d),points per year (365 d)
+Fleet 1 Hz: 100 machines x 10 sensors x 1 Hz,1000,3600000,86400000,2592000000,31536000000
+Single vibration sensor @ 100 Hz (1 machine),100,360000,8640000,259200000,3153600000
+Fleet vibration: 100 machines x 1 sensor x 100 Hz,10000,36000000,864000000,25920000000,315360000000
+Design point: 10 x 1 Hz + 1 x 100 Hz per machine,11000,39600000,950400000,28512000000,346896000000
+Raw accelerometer: 100 machines x 3 axes x 2 kHz,600000,2160000000,51840000000,1555200000000,18921600000000

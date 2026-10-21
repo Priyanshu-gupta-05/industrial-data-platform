@@ -1,0 +1,21 @@
+scenario,encoding,bytes_per_point,bandwidth_mbps,GB_per_day,TB_per_month,TB_per_year
+Fleet 1 Hz: 100 machines x 10 sensors x 1 Hz,Binary value only (8 B),8.0,0.064,0.6912,0.020736,0.252288
+Fleet 1 Hz: 100 machines x 10 sensors x 1 Hz,Binary narrow record (20 B),20.0,0.16,1.728,0.05184,0.63072
+Fleet 1 Hz: 100 machines x 10 sensors x 1 Hz,JSON/MQTT one value per message,219.0,1.752,18.9216,0.567648,6.906384
+Fleet 1 Hz: 100 machines x 10 sensors x 1 Hz,JSON/MQTT batched (per machine-second),38.0,0.304,3.2832,0.098496,1.198368
+Single vibration sensor @ 100 Hz (1 machine),Binary value only (8 B),8.0,0.0064,0.06912,0.0020736,0.0252288
+Single vibration sensor @ 100 Hz (1 machine),Binary narrow record (20 B),20.0,0.016,0.1728,0.005184,0.063072
+Single vibration sensor @ 100 Hz (1 machine),JSON/MQTT one value per message,219.0,0.1752,1.89216,0.0567648,0.6906384
+Single vibration sensor @ 100 Hz (1 machine),JSON/MQTT batched (per machine-second),8.25,0.0066,0.07128,0.0021384,0.0260172
+Fleet vibration: 100 machines x 1 sensor x 100 Hz,Binary value only (8 B),8.0,0.64,6.912,0.20736,2.52288
+Fleet vibration: 100 machines x 1 sensor x 100 Hz,Binary narrow record (20 B),20.0,1.6,17.28,0.5184,6.3072
+Fleet vibration: 100 machines x 1 sensor x 100 Hz,JSON/MQTT one value per message,219.0,17.52,189.216,5.67648,69.06384
+Fleet vibration: 100 machines x 1 sensor x 100 Hz,JSON/MQTT batched (per machine-second),8.25,0.66,7.128,0.21384,2.60172
+Design point: 10 x 1 Hz + 1 x 100 Hz per machine,Binary value only (8 B),8.0,0.704,7.6032,0.228096,2.775168
+Design point: 10 x 1 Hz + 1 x 100 Hz per machine,Binary narrow record (20 B),20.0,1.76,19.008,0.57024,6.93792
+Design point: 10 x 1 Hz + 1 x 100 Hz per machine,JSON/MQTT one value per message,219.0,19.272,208.1376,6.244128,75.970224
+Design point: 10 x 1 Hz + 1 x 100 Hz per machine,JSON/MQTT batched (per machine-second),10.95,0.9635999999999999,10.406879999999997,0.31220639999999994,3.7985111999999996
+Raw accelerometer: 100 machines x 3 axes x 2 kHz,Binary value only (8 B),8.0,38.4,414.72,12.4416,151.3728
+Raw accelerometer: 100 machines x 3 axes x 2 kHz,Binary narrow record (20 B),20.0,96.0,1036.8,31.104,378.432
+Raw accelerometer: 100 machines x 3 axes x 2 kHz,JSON/MQTT one value per message,219.0,1051.2,11352.96,340.5888,4143.8304
+Raw accelerometer: 100 machines x 3 axes x 2 kHz,JSON/MQTT batched (per machine-second),8.25,39.6,427.68,12.8304,156.1032
