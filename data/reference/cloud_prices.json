@@ -1,0 +1,35 @@
+{
+  "_note": "Indicative USD list prices for India regions where available, accessed 2026-10-21. Source IDs refer to docs/sources.md. Single source of truth for the dashboard calculator and python/part_c_decision_matrix.py.",
+  "fx": {"usd_inr": 94.7145, "date": "2026-10-21", "source": "S78", "description": "RBI/FBIL reference rate, 1:00 pm IST"},
+  "hours_per_month": 720,
+  "aws": {
+    "region": "ap-south-1 (Mumbai)",
+    "iot_core_per_million_msgs": 1.05, "iot_core_msg_meter_kb": 5, "iot_core_source": "S18",
+    "iot_core_rules_per_million": 0.158, "iot_core_actions_per_million": 0.158,
+    "sitewise_ingest_per_million_msgs": 1.30, "sitewise_source": "S20",
+    "s3_standard_gb_month": 0.025, "s3_source": "S21",
+    "kinesis_shard_hour": 0.0175, "kinesis_put_per_million_units": 0.0185, "kinesis_source": "S22",
+    "rds_postgres_t4g_medium_hour": 0.065, "rds_source": "S24", "rds_region_note": "US West (Oregon) reference; Mumbai not retrievable",
+    "postgres_storage_gb_month": 0.115, "postgres_storage_note": "assumed gp3 order of magnitude"
+  },
+  "azure": {
+    "region": "Central India (Pune)",
+    "iot_hub_s1_unit_month": 35, "iot_hub_s1_msgs_per_day": 400000,
+    "iot_hub_s2_unit_month": 350, "iot_hub_s2_msgs_per_day": 6000000,
+    "iot_hub_s3_unit_month": 3500, "iot_hub_s3_msgs_per_day": 300000000,
+    "iot_hub_msg_meter_kb": 4, "iot_hub_source": "S46,S47",
+    "event_hubs_tu_hour": 0.03, "event_hubs_ingress_per_million": 0.028, "event_hubs_source": "S48",
+    "adls_hot_gb_month": 0.020, "adls_source": "S49",
+    "postgres_flex_b2s_hour": 0.098, "postgres_flex_d2ds_v5_hour": 0.251, "postgres_storage_gb_month": 0.131,
+    "postgres_source": "S50",
+    "fabric_cu_hour": 0.20, "fabric_source": "S52"
+  },
+  "gcp": {
+    "region": "asia-south1 (Mumbai) - India prices not retrievable; default-region list prices used",
+    "pubsub_per_tib": 40, "pubsub_source": "S73",
+    "gcs_standard_gb_month": 0.020, "gcs_source": "S74",
+    "bigquery_query_per_tib": 6.25, "bigquery_storage_gb_month": 0.023, "bigquery_source": "S75",
+    "cloudsql_vcpu_hour": 0.0413, "cloudsql_gib_hour": 0.007, "cloudsql_source": "S76",
+    "mqtt_broker_vm_month": 60, "mqtt_broker_note": "self-managed MQTT broker VM (e2-standard-2 order of magnitude), assumption"
+  }
+}
