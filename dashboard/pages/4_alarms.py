@@ -1,3 +1,5 @@
+import textwrap
+
 import pandas as pd
 import plotly.express as px
 import streamlit as st
@@ -31,13 +33,14 @@ with left:
     p = p.sort_values("events", ascending=False)
     p["cum"] = p.events.cumsum() / p.events.sum()
     p["label"] = p.apply(lambda r: f"{r.events}  (cum. {r.cum:.0%})", axis=1)
-    fig = px.bar(p, x="events", y="alarm_name", orientation="h", color="severity", text="label",
+    p["name"] = p["alarm_name"].map(lambda s: "<br>".join(textwrap.wrap(s, 22)))   # wrap long names for narrow screens
+    fig = px.bar(p, x="events", y="name", orientation="h", color="severity", text="label",
                  color_discrete_map={"WARNING": ui.STATUS["warning"], "CRITICAL": ui.STATUS["critical"]},
                  title="Alarm Pareto (cumulative share in labels)")
     fig.update_yaxes(categoryorder="total ascending", title=None)
-    fig.update_traces(textposition="outside", cliponaxis=False)
+    fig.update_traces(textposition="auto")
     fig.update_layout(height=430)
-    st.plotly_chart(fig, use_container_width=True)
+    ui.chart(fig)
 with right:
     fig = px.scatter(ev, x="ts", y="machine_code", color="severity", symbol="severity",
                      color_discrete_map={"WARNING": ui.STATUS["warning"], "CRITICAL": ui.STATUS["critical"]},
@@ -46,12 +49,12 @@ with right:
     fig.update_yaxes(title=None, categoryorder="category descending")
     fig.update_xaxes(title=None)
     fig.update_layout(height=max(430, 9 * ev.machine_code.nunique()))
-    st.plotly_chart(fig, use_container_width=True)
+    ui.chart(fig)
 
 daily = ev.assign(day=ev.ts.dt.tz_localize(None).dt.floor("D")).groupby(["day", "plant_code"]).size().reset_index(name="alarms")
 fig = px.bar(daily, x="day", y="alarms", color="plant_code", color_discrete_map=ui.PLANT_COLORS,
              title="Alarm events per day by plant")
-st.plotly_chart(fig, use_container_width=True)
+ui.chart(fig)
 
 st.subheader("Reliability per machine (full year, from sql/04_advanced_queries.sql)")
 rel = data.sql_result("a3_mtbf_mttr_per_machine")
@@ -61,7 +64,7 @@ with c1:
     fig = px.scatter(rel, x="mtbf_hours", y="mttr_hours", color="plant_code", color_discrete_map=ui.PLANT_COLORS,
                      size="failures", hover_name="machine_code", title="MTBF vs MTTR (bubble = failures)",
                      labels={"mtbf_hours": "MTBF (running hours)", "mttr_hours": "MTTR (hours)"})
-    st.plotly_chart(fig, use_container_width=True)
+    ui.chart(fig)
 with c2:
-    st.dataframe(rel.sort_values("mtbf_hours").head(15), hide_index=True, use_container_width=True)
+    st.dataframe(rel.sort_values("mtbf_hours").head(15), hide_index=True, width="stretch")
 st.caption("Alarm names are an illustrative mapping of Azure PdM benchmark events (see core.alarm_master).")

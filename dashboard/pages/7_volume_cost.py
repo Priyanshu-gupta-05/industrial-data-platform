@@ -76,11 +76,11 @@ with left:
                  color_discrete_sequence=ui.SERIES)
     fig.update_yaxes(title="INR / month", tickformat=",.0f")
     fig.update_xaxes(title=None)
-    st.plotly_chart(fig, use_container_width=True)
+    ui.chart(fig)
 with right:
     tot = df.groupby("cloud").inr_month.sum().rename("INR / month").to_frame()
     tot["INR / year"] = tot["INR / month"] * 12
-    st.dataframe(tot.style.format("₹{:,.0f}"), use_container_width=True)
+    st.dataframe(tot.style.format("₹{:,.0f}"), width="stretch")
     st.caption(f"Azure IoT Hub: {n_units} x {tier.upper()} unit(s); message ≈ {msg_bytes / 1024:,.1f} KB "
                f"({math.ceil(msg_bytes / 4096)} x 4 KB meter). AWS IoT Core metered per 5 KB. GCP has no managed "
                "IoT service: Pub/Sub + a self-managed MQTT broker VM.")

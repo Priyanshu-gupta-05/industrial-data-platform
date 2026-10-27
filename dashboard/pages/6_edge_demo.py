@@ -45,7 +45,7 @@ fig.add_trace(go.Scattergl(x=d.t_s, y=x, mode="lines", line=dict(width=0.6, colo
 fig.add_trace(go.Bar(x=feat.second + 0.5, y=feat.RMS, marker_color=ui.SERIES[2], name="RMS", width=0.8), row=2, col=1)
 fig.update_layout(height=560, showlegend=False)
 fig.update_xaxes(title_text="Time (s)", row=2, col=1)
-st.plotly_chart(fig, use_container_width=True)
+ui.chart(fig)
 
 left, right = st.columns([1.3, 1])
 with left:
@@ -58,11 +58,11 @@ with left:
                                colorbar=dict(title="dB")))
     fig.update_layout(title="Spectrogram (bad operations show a strong ~250 Hz line)", height=380,
                       xaxis_title="Time (s)", yaxis_title="Frequency (Hz)")
-    st.plotly_chart(fig, use_container_width=True)
+    ui.chart(fig)
 with right:
     st.markdown("**Features sent to the cloud (per second)**")
     st.dataframe(feat.style.format({"RMS": "{:.1f}", "peak": "{:.1f}", "crest": "{:.2f}", "kurtosis": "{:.2f}",
-                                    "dominant Hz": "{:.0f}"}), hide_index=True, use_container_width=True, height=380)
+                                    "dominant Hz": "{:.0f}"}), hide_index=True, width="stretch", height=380)
 
 st.subheader("MQTT store-and-forward test")
 mq = data.result_json("mqtt_demo_summary")
@@ -71,6 +71,6 @@ ui.kpi(c[0], "Produced at edge", f"{mq['messages_produced']}")
 ui.kpi(c[1], "Stored in PostgreSQL", f"{mq['rows_in_postgres']}")
 ui.kpi(c[2], "Lost / duplicates", f"{mq['lost']} / {mq['duplicates_in_postgres']}")
 ui.kpi(c[3], "Max outbox backlog", f"{mq['max_outbox_backlog']}", "during 12 s WAN outage")
-st.image(str(data.FIGURES / "edge_mqtt_store_and_forward.png"), use_container_width=True)
+st.image(str(data.FIGURES / "edge_mqtt_store_and_forward.png"), width="stretch")
 st.caption("REAL data: Bosch CNC Machining dataset (Tnani et al., 2022, CC-BY-4.0), first 10 s of one good and one "
            "bad operation (M01, OP01). Features are DERIVED.")

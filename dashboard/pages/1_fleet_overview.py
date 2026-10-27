@@ -41,7 +41,7 @@ with left:
                  color_discrete_map=ui.PLANT_COLORS, text_auto=".1%", title="OEE components by plant")
     fig.update_yaxes(tickformat=".0%", range=[0, 1.08], title=None)
     fig.update_xaxes(title=None)
-    st.plotly_chart(fig, use_container_width=True)
+    ui.chart(fig)
 with right:
     mix = md.groupby(["plant_code", "machine_status"], observed=True).size().reset_index(name="hours")
     mix["share"] = mix.hours / mix.groupby("plant_code").hours.transform("sum")
@@ -50,18 +50,18 @@ with right:
                  category_orders={"machine_status": data.STATUS_ORDER})
     fig.update_xaxes(tickformat=".0%", title=None)
     fig.update_yaxes(title=None)
-    st.plotly_chart(fig, use_container_width=True)
+    ui.chart(fig)
 
 daily = (md.assign(day=md.ts.dt.tz_localize(None).dt.floor("D"))
            .groupby(["day", "plant_code"]).agg(parts=("production_count", "sum"),
                                                rejects=("reject_count", "sum")).reset_index())
 fig = px.line(daily, x="day", y="parts", color="plant_code", color_discrete_map=ui.PLANT_COLORS,
               title="Daily parts produced by plant", labels={"parts": "Parts per day", "day": ""})
-st.plotly_chart(fig, use_container_width=True)
+ui.chart(fig)
 
 tbl = (md.groupby("plant_code").apply(lambda g: pd.Series(ui.oee_parts(g)), include_groups=False)
          [["parts", "rejects", "reject_rate", "availability", "performance", "quality", "oee"]])
 st.dataframe(tbl.style.format({"parts": "{:,.0f}", "rejects": "{:,.0f}", "reject_rate": "{:.2%}",
                                "availability": "{:.1%}", "performance": "{:.1%}", "quality": "{:.2%}", "oee": "{:.1%}"}),
-             use_container_width=True)
+             width="stretch")
 ui.derived_note()

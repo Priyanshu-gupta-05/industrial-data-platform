@@ -43,7 +43,7 @@ else:
                                xgap=1, ygap=1, hovertemplate="%{y} %{x|%d %b}: %{z:.0%} running<extra></extra>",
                                colorbar=dict(title="Running", tickformat=".0%")))
     fig.update_layout(title="Share of each day spent running (dark = productive)", height=max(420, 18 * len(piv)))
-st.plotly_chart(fig, use_container_width=True)
+ui.chart(fig)
 
 c1, c2 = st.columns(2)
 with c1:
@@ -51,13 +51,13 @@ with c1:
            .production_count.sum().reset_index())
     fig = px.area(t, x="day", y="production_count", color="part_name", title="Daily parts by part family",
                   labels={"production_count": "Parts per day", "day": ""})
-    st.plotly_chart(fig, use_container_width=True)
+    ui.chart(fig)
 with c2:
     sh = md.groupby("shift").agg(parts=("production_count", "sum"), rejects=("reject_count", "sum")).reset_index()
     sh["reject_rate"] = sh.rejects / sh.parts
     fig = px.bar(sh, x="shift", y="parts", text_auto=",.0f", title="Parts by shift (A 06-14, B 14-22, C 22-06)",
                  color_discrete_sequence=[ui.SERIES[0]])
-    st.plotly_chart(fig, use_container_width=True)
+    ui.chart(fig)
 
 league = (md.groupby(["machine_code", "machine_type", "part_name"])
             .apply(lambda g: pd.Series(ui.oee_parts(g)), include_groups=False).reset_index()
@@ -71,5 +71,5 @@ st.dataframe(league[["machine_code", "machine_type", "part_name", "parts", "reje
                             "performance": st.column_config.NumberColumn(format="percent"),
                             "quality": st.column_config.NumberColumn(format="percent"),
                             "parts": st.column_config.NumberColumn(format="localized")},
-             hide_index=True, use_container_width=True)
+             hide_index=True, width="stretch")
 ui.derived_note()

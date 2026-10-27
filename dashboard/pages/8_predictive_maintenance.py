@@ -40,7 +40,7 @@ with left:
     fig.update_yaxes(categoryorder="total ascending", title=None)
     fig.update_xaxes(tickformat=".0%", range=[0, 1.05], title=None)
     fig.update_layout(height=560)
-    st.plotly_chart(fig, use_container_width=True)
+    ui.chart(fig)
 with right:
     mid = st.selectbox("Machine", cur.machine_id, format_func=lambda i: m.set_index("machine_id").loc[i, "machine_code"])
     r = risk[risk.machine_id == mid]
@@ -51,7 +51,7 @@ with right:
     fig.add_hline(y=thr, line=dict(color="#52514e", dash="dot", width=1))
     fig.update_layout(title="Hourly risk vs actual failures (red dashed), alert threshold (dotted)", height=500,
                       yaxis=dict(tickformat=".0%", range=[0, 1.02]), showlegend=False)
-    st.plotly_chart(fig, use_container_width=True)
+    ui.chart(fig)
 
 st.subheader("Model scorecards")
 b = data.result_json("ml_bosch_anomaly")
@@ -74,7 +74,7 @@ cards = pd.DataFrame([
        "ROC-AUC": v["base + physics features"]["roc_auc"], "PR-AUC": v["base + physics features"]["pr_auc"]}
       for k, v in a4.items()],
 ])
-st.dataframe(cards.style.format({"ROC-AUC": "{:.3f}", "PR-AUC": "{:.3f}"}), hide_index=True, use_container_width=True)
+st.dataframe(cards.style.format({"ROC-AUC": "{:.3f}", "PR-AUC": "{:.3f}"}), hide_index=True, width="stretch")
 c = st.columns(3)
 ui.kpi(c[0], "Indicative net benefit / year", f"₹{bi['total_net_saving_inr_per_year'] / 1e7:,.2f} crore",
        "PdM + wear-based tool change")

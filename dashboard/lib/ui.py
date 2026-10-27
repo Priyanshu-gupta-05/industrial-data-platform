@@ -21,23 +21,44 @@ pio.templates["idp"] = go.layout.Template(layout=dict(
     paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)",
     xaxis=dict(gridcolor="#e1e0d9", linecolor="#c3c2b7", zeroline=False),
     yaxis=dict(gridcolor="#e1e0d9", linecolor="#c3c2b7", zeroline=False),
-    legend=dict(orientation="h", yanchor="bottom", y=1.0, xanchor="right", x=1, title_text=""),
-    margin=dict(l=10, r=10, t=70, b=10),
+    margin=dict(l=10, r=10, t=50, b=10),
     hoverlabel=dict(font_size=12)))
 pio.templates.default = "plotly_white+idp"
 
 CSS = """
 <style>
 .block-container {padding-top: 2.2rem; max-width: 1500px;}
-.kpi {border: 1px solid rgba(11,11,11,0.10); border-radius: 10px; padding: 14px 16px; background: #ffffff;
-      color: #0b0b0b; box-shadow: 0 1px 2px rgba(11,11,11,0.04);}
-.kpi .lab {font-size: 0.80rem; color: #52514e; text-transform: uppercase; letter-spacing: .04em;}
-.kpi .val {font-size: 1.9rem; font-weight: 650; line-height: 1.25;}
-.kpi .sub {font-size: 0.80rem; color: #898781;}
+h1 {font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.6rem) !important;}
+
+/* Responsive columns: instead of shrinking, columns wrap onto the next row when the screen is narrow.
+   Charts/tables need ~340 px, KPI cards ~170 px. */
+[data-testid="stHorizontalBlock"] {flex-wrap: wrap !important; gap: 0.75rem !important;}
+[data-testid="stHorizontalBlock"] > [data-testid="stColumn"],
+[data-testid="stHorizontalBlock"] > [data-testid="column"] {flex: 1 1 340px !important; min-width: min(340px, 100%) !important;}
+[data-testid="stHorizontalBlock"] > [data-testid="stColumn"]:has(.kpi),
+[data-testid="stHorizontalBlock"] > [data-testid="column"]:has(.kpi) {flex: 1 1 170px !important; min-width: min(170px, 100%) !important;}
+
+.kpi {border: 1px solid rgba(11,11,11,0.10); border-radius: 10px; padding: 12px 14px; background: #ffffff;
+      color: #0b0b0b; box-shadow: 0 1px 2px rgba(11,11,11,0.04); height: 100%;}
+.kpi .lab {font-size: 0.74rem; color: #52514e; text-transform: uppercase; letter-spacing: .04em; line-height: 1.3;}
+.kpi .val {font-size: clamp(1.25rem, 0.9rem + 1.1vw, 1.9rem); font-weight: 650; line-height: 1.25;
+           word-break: keep-all; overflow-wrap: normal;}
+.kpi .sub {font-size: 0.76rem; color: #898781; line-height: 1.3;}
 .tag {display:inline-block; padding:1px 8px; border-radius:10px; font-size:0.72rem; margin-left:6px;
       border:1px solid rgba(11,11,11,0.15); color:#52514e;}
 </style>
 """
+
+
+def chart(fig, height: int | None = None) -> None:
+    """Show a Plotly chart full-width with the legend below the plot, so it can never collide with the title."""
+    fig.update_layout(legend=dict(orientation="h", x=0, xanchor="left", y=0, yref="container", yanchor="bottom",
+                                  title_text=""),
+                      margin=dict(t=50, b=60), autosize=True)          # merges: keeps a page's own l/r margins
+    if height:
+        fig.update_layout(height=height)
+    # toolbar hidden: on narrow screens it covers the title (drag still zooms, double-click resets)
+    st.plotly_chart(fig, width="stretch", config={"responsive": True, "displayModeBar": False})
 
 
 def setup(title: str, subtitle: str = "") -> None:

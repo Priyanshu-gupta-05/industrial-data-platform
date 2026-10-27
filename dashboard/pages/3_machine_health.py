@@ -54,11 +54,11 @@ fig.add_trace(go.Scatter(x=al.ts, y=[0.2] * len(al), mode="markers", name="alarm
                          text=al.alarm_code, hovertemplate="%{x}<br>%{text}<extra>alarm</extra>"), row=1, col=1)
 fig.update_yaxes(range=[0, max(5, float(run.vibration.max()) * 1.1)], row=1, col=1)
 fig.update_layout(height=900, showlegend=False, margin=dict(r=90))
-st.plotly_chart(fig, use_container_width=True)
+ui.chart(fig)
 
 if len(al):
     am = data.master()["alarm"][["alarm_code", "alarm_name", "severity"]]
     st.subheader("Alarms in the selected period")
     st.dataframe(al[["ts", "alarm_code", "alarm_count", "machine_status"]].merge(am, on="alarm_code"),
-                 hide_index=True, use_container_width=True)
+                 hide_index=True, width="stretch")
 ui.derived_note()
