@@ -2,7 +2,7 @@
 
 ![Python](https://img.shields.io/badge/Python-3.13-2a78d6) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-336791) ![Streamlit](https://img.shields.io/badge/Streamlit-1.66-eb6834) ![Cloud](https://img.shields.io/badge/Recommended%20cloud-Microsoft%20Azure%20(Central%20India)-1baf7a) ![Data](https://img.shields.io/badge/Real%20data-Bosch%20%2B%20UMich-6250d6) ![License](https://img.shields.io/badge/code-MIT-lightgrey)
 
-**Author:** Tirthanker Singh ([@TirthankerSingh](https://github.com/TirthankerSingh)) · **Live dashboard:** `[HOSTED LINK - added after deployment]` · **Report:** [`report.pdf`](report.pdf)
+**Author:** Tirthanker Singh ([@TirthankerSingh](https://github.com/TirthankerSingh)) · **Live dashboard:** [industrial-data-platform.streamlit.app](https://industrial-data-platform.streamlit.app) · **Report:** [`report.pdf`](report.pdf)
 
 Design and justification of a practical cloud-data architecture for a manufacturer running 100 CNC machines in three plants. The analysis is built on **four public datasets** (two of them real factory data), a working PostgreSQL database, an edge-gateway MQTT demo, machine-learning models and an 8-page dashboard.
 

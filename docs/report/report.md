@@ -345,7 +345,7 @@ The whole cloud bill (₹4–10 lakh per year) is about 1–2% of this benefit.
 
 **Where it runs.**
 - **Locally**, the Streamlit dashboard (`dashboard/`) reads PostgreSQL.
-- **Hosted** on Streamlit Community Cloud, it reads the bundled Parquet snapshot, so it cannot fail if a database is unavailable on demo day.
+- **Hosted** on Streamlit Community Cloud at https://industrial-data-platform.streamlit.app, it reads the bundled Parquet snapshot, so it cannot fail if a database is unavailable on demo day.
 - Both modes run the same analysis code. Sidebar filters (plant, date range) apply to every page.
 
 The eight pages are:
