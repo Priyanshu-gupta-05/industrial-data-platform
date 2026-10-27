@@ -67,7 +67,9 @@ def _pg_frame(sql: str) -> pd.DataFrame:
     return pd.read_csv(buf)
 
 
-@st.cache_data(show_spinner="Loading fleet data ...", ttl=3600)
+# cache_resource keeps ONE shared copy of the 876k-row table. cache_data would hand every page run a
+# fresh deserialised copy, which exhausted the hosted app's memory. Pages must treat it as read-only.
+@st.cache_resource(show_spinner="Loading fleet data ...", ttl=3600)
 def machine_data() -> pd.DataFrame:
     if backend() == "postgres":
         # epoch seconds parse ~100x faster than ISO strings with offsets
