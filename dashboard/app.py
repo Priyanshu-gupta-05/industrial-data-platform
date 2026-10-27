@@ -21,14 +21,14 @@ from lib import data  # noqa: E402
 st.set_page_config(page_title="Industrial Data Platform", page_icon="⚙️", layout="wide")
 
 PAGES = [
-    st.Page("pages/1_fleet_overview.py", title="Fleet overview", icon=":material/factory:", default=True),
-    st.Page("pages/2_plant_drilldown.py", title="Plant drill-down", icon=":material/grid_view:"),
-    st.Page("pages/3_machine_health.py", title="Machine health", icon=":material/monitor_heart:"),
-    st.Page("pages/4_alarms.py", title="Alarms", icon=":material/notifications_active:"),
-    st.Page("pages/5_quality.py", title="Quality", icon=":material/verified:"),
-    st.Page("pages/6_edge_demo.py", title="Edge demo", icon=":material/memory:"),
-    st.Page("pages/7_volume_cost.py", title="Data volume & cost", icon=":material/calculate:"),
-    st.Page("pages/8_predictive_maintenance.py", title="Predictive maintenance", icon=":material/insights:"),
+    st.Page("views/1_fleet_overview.py", title="Fleet overview", icon=":material/factory:", default=True),
+    st.Page("views/2_plant_drilldown.py", title="Plant drill-down", icon=":material/grid_view:"),
+    st.Page("views/3_machine_health.py", title="Machine health", icon=":material/monitor_heart:"),
+    st.Page("views/4_alarms.py", title="Alarms", icon=":material/notifications_active:"),
+    st.Page("views/5_quality.py", title="Quality", icon=":material/verified:"),
+    st.Page("views/6_edge_demo.py", title="Edge demo", icon=":material/memory:"),
+    st.Page("views/7_volume_cost.py", title="Data volume & cost", icon=":material/calculate:"),
+    st.Page("views/8_predictive_maintenance.py", title="Predictive maintenance", icon=":material/insights:"),
 ]
 nav = st.navigation(PAGES)
 
